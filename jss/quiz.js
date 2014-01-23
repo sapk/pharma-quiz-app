@@ -9,6 +9,9 @@ var Q ={
         //ajout d'une bonne réponse au questions
         q.push([1,d.value[Math.floor((Math.random()*d.value.length))]])
         var ext = q[0][1].split(" ")[3];
+        if(q[0][1].split(" ").length == 5)
+            ext += " "+q[0][1].split(" ")[4];
+                
         var diff = parseFloat(q[0][1].split(" ")[2]) - parseFloat(q[0][1].split(" ")[0]);
         var pres = 0;
         if(q[0][1].split(" ")[2].split(".").length == 2)

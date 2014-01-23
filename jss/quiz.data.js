@@ -17,15 +17,7 @@ Q.data = {
         {name : "Pl Bicarbonate", value : ["23 - 27 mmol/L"]},
         {name : "Pl Osmolalité", value : ["295 - 310 mmol/kg d’eau","295 - 310 mOsm/kg d’eau"]},
         {name : "Pl Ammonium", value : ["25 - 40 µmol/L","0.45 - 0.70 mg/L"]},
-        {name : "", value : ["",""]},
-        {name : "", value : ["",""]},
-        {name : "", value : ["",""]},
-        {name : "", value : ["",""]},
-        {name : "", value : ["",""]},
-        {name : "", value : ["",""]},
-        {name : "", value : ["",""]},
-        
-        
+          
     ]
 };
 //http://www.cnci.univ-paris5.fr/pharmacie/Constantes_biologiques_adultes_2009.pdf
