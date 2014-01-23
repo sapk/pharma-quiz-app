@@ -26,7 +26,7 @@
                 -->
             </div>
             <br><br><br>
-            <button onclick="$('.choices').toggleClass('results');$('#reload').show();$(this).remove();" class="btn btn-lg btn-block btn-primary pull-right"> Valider ></button>
+            <button onclick="$('.choices a').attr('onclick','')/*.attr('disabled','disabled')*/;$('.choices').toggleClass('results');$('#reload').show();$(this).remove();" class="btn btn-lg btn-block btn-primary pull-right"> Valider ></button>
             <button id="reload" style="display: none;" onclick="window.location.reload();" class="btn btn-lg btn-block btn-primary pull-right"> Réessayer </button>
         </div>
 
