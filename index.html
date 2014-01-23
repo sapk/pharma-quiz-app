@@ -4,7 +4,6 @@
         <title>Quiz Pharma</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
-        <script src="jss/zepto.min.js" ></script>
         <link rel="stylesheet" href="css/bootstrap.min.css" />
         <link rel="stylesheet" href="css/style.css" />
     </head>
@@ -16,6 +15,22 @@
                 </div>
             </div>
         </div>
-        <div>Hello World !</div>
+
+        <div class="container">
+            <br><br>
+            <br><br>
+            <br><br>
+            <div class="btn-group-vertical choices">
+                <a onclick="$(this).toggleClass('btn-success');" class="btn btn-lg btn-default">Left</a>
+                <a class="btn btn-lg btn-default">Middle</a>
+                <a class="btn btn-lg btn-default">Right</a>
+            </div>
+            <br><br>
+            <button class="btn btn-lg btn-primary pull-right">Valider ></button>
+        </div>
+
+        <script src="jss/zepto.min.js" ></script>
+        <script src="jss/quiz.js" ></script>
+        <script src="jss/quiz.data.js" ></script>
     </body>
 </html>

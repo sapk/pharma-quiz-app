@@ -1,3 +1,16 @@
+
+body {
+  padding-top: 50px;
+}
+
+.choices{
+    width: 100%;
+    margin-top: 10px;
+}
+.choices>.selected{
+   background: green;
+}
+
 .navbar-brand>img {
     height: 35px;
     margin: -15px 0px;
