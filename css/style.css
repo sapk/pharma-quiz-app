@@ -1,6 +1,6 @@
 
 body {
-  padding-top: 50px;
+    padding-top: 50px;
 }
 .title{
     text-align: center;
@@ -9,8 +9,15 @@ body {
     width: 100%;
     margin-top: 10px;
 }
-.choices>.selected{
-   background: green;
+.results>.btn[data-good='1']:not(.btn-success){
+    color: #fff;
+    background-color: #39b3d7;
+    border-color: #269abc;
+}
+.results>.btn-success[data-good='0']{
+    color: #fff;
+    background-color: #ed9c28;
+    border-color: #d58512;
 }
 
 .navbar-brand>img {

@@ -21,16 +21,18 @@
             <h2 class="well title">Se ou Pl Créatinine - Homme</h2>
             <br>
             <div class="btn-group-vertical choices">
+                <!--
                 <a onclick="$(this).toggleClass('btn-success');" class="btn btn-lg btn-default">Left</a>
-                <a class="btn btn-lg btn-default">Middle</a>
-                <a class="btn btn-lg btn-default">Right</a>
+                -->
             </div>
             <br><br><br>
-            <button class="btn btn-lg btn-block btn-primary pull-right"> Valider ></button>
+            <button onclick="$('.choices').toggleClass('results');$('#reload').show();$(this).remove();" class="btn btn-lg btn-block btn-primary pull-right"> Valider ></button>
+            <button id="reload" style="display: none;" onclick="window.location.reload();" class="btn btn-lg btn-block btn-primary pull-right"> Réessayer </button>
         </div>
 
         <script src="jss/zepto.min.js" ></script>
         <script src="jss/quiz.js" ></script>
+        <script src="jss/quiz.tool.js" ></script>
         <script src="jss/quiz.data.js" ></script>
     </body>
 </html>
