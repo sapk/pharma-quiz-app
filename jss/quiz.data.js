@@ -17,7 +17,11 @@ Q.data = {
         {name : "Pl Bicarbonate", value : ["23 - 27 mmol/L"]},
         {name : "Pl Osmolalité", value : ["295 - 310 mmol/kg d’eau","295 - 310 mOsm/kg d’eau"]},
         {name : "Pl Ammonium", value : ["25 - 40 µmol/L","0.45 - 0.70 mg/L"]},
-          
+        {name : "Se ou Pl Calcium", value : ["2.20 - 2.60 mmol/L","88 - 104 mg/L"]},
+        {name : "Se ou Pl Fer", value : ["10 - 30 µmol/L","0.55 - 1.65 mg/L"]},
+        {name : "Se ou Pl Saturation de la transferrine", value : ["0.20 - 0.40 ","20 - 40 %"]},
+        {name : "Se ou Pl Phosphate (inorganique)", value : ["0.80 - 1.40 mmol/L","25 - 45 mg/L (P)"]},
+        {name : "dU Calcium", value : ["2.5 - 8.0 mmol","100 - 320 mg"]},
     ]
 };
 //http://www.cnci.univ-paris5.fr/pharmacie/Constantes_biologiques_adultes_2009.pdf
