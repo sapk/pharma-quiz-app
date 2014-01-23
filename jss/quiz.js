@@ -16,9 +16,10 @@ var Q ={
         console.log(pres);
         for (t=0;t<3;t++){
             //TODO genrate some false value
+            do{
             var min = (Math.floor((Math.random()*parseFloat(q[0][1].split(" ")[0])*4*1000))/1000);
+            } while (min.toFixed(pres)==q[0][1].split(" ")[2]);
             console.log(min.toFixed(pres));
-            console.log(diff);
             var text = min.toFixed(pres)+ " - "+ (min + diff).toFixed(pres) + " " + ext;
             q.push([0,text])
         }
