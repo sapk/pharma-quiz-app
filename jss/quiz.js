@@ -8,10 +8,13 @@ var Q ={
         var q = [];
         //ajout d'une bonne réponse au questions
         q.push([1,d.value[Math.floor((Math.random()*d.value.length))]])
-        
+        var ext = q[0][1].split(" ")[3];
+        var diff = parseFloat(q[0][1].split(" ")[2] - q[0][1].split(" ")[0]);
         for (t=0;t<3;t++){
             //TODO genrate some false value
-            q.push([0,Math.floor((Math.random()*120))])
+            var min = Math.floor((Math.random()*120))
+            var text = min+ " - "+ (parseFloat(min)+parseFloat(diff)) + " " + ext;
+            q.push([0,text])
         }
         
         Q.tool.shuffle(q);
