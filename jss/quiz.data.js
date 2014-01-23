@@ -22,6 +22,22 @@ Q.data = {
         {name : "Se ou Pl Saturation de la transferrine", value : ["0.20 - 0.40 ","20 - 40 %"]},
         {name : "Se ou Pl Phosphate (inorganique)", value : ["0.80 - 1.40 mmol/L","25 - 45 mg/L (P)"]},
         {name : "dU Calcium", value : ["2.5 - 8.0 mmol","100 - 320 mg"]},
+        {name : "SgA pH (à 37°C)", value : ["7.35 - 7.45 "]},
+        {name : "SgA pCO2", value : ["35 - 45 mmHg"]},
+        {name : "SgA pO2", value : ["80 - 100 mmHg"]},
+        {name : "SgA Oxyhémoglobine/Hémoglobine totale (SaO2)", value : ["0.94 - 1.00 ","94 - 100 %"]},
+        {name : "SgA Bicarbonate", value : ["23 - 27 mmol/L"]},
+        {name : "SgA CO2 total", value : ["25 - 30 mmol/L"]},
+        /*
+        Se Alanine aminotransférase (ALAT, TGP) < 45 UI/L < 34 UI/L
+        Se Aspartate aminotransférase (ASAT, TGO) < 35 UI/L < 35 UI/L
+        Se Créatine kinase (CK) <171 UI/L < 145 UI/L
+        Se Gamma glutamyltransférase (GGT) < 55 UI/L < 38 UI/L
+        Se Lactate déshydrogénase (LDH) < 248 UI/L < 248 UI/L
+        */
+        {name : "Pl Glucose", value : ["3.90 - 5.50 mmol/L","0.70 - 1.00 g/L"]},
+        {name : "Pl Lactate", value : ["0.50 - 2.0 mmol/L","45 - 180 mg/L"]},
+        {name : "LCR Glucose", value : ["2.50 - 3.50 mmol/L","0.45 - 0.65 g/L"]},
     ]
 };
 //http://www.cnci.univ-paris5.fr/pharmacie/Constantes_biologiques_adultes_2009.pdf
