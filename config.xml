@@ -19,5 +19,7 @@
     <preference name="phonegap-version" value="3.1.0" />
     <preference name="orienation" value="portrait" />
     
+    <preference name="SplashScreenDelay" value="1000" />
+    
     <feature name="http://api.phonegap.com/1.0/notification"/>
 </widget>
