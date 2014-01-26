@@ -1,4 +1,5 @@
 Q.data = {
+    units : ["µmol/L","mg/L","g/L","mg","mmol","mmol/L","mL/s","mL/min","mmol/kg d’eau","mOsm/kg d’eau"," ","%","mg/L (P)"],
     values : [
 //      {name : "", value : ["",""], type : 1 },
         {name : "Se ou Pl Créatinine - Homme", value : ["60 - 115 µmol/L","7 - 13 mg/L"], type : 1 },

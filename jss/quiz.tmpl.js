@@ -2,12 +2,25 @@ Q.tmpl = {
     answer: {
         body: function(question) {
             var html = '<br><h2 class="well title">' + question.name + '</h2><br>'
-            var tmp = "", ext = '<option disabled selected style="display:none;" >Unit</option>';
+            var tmp = "", ext = '<option disabled selected style="display:none;" >Unit</option>', list = [];
             $(question.value).each(function(id, value) {
-                ext += '<option>'+Q.tool.get_unit(value.split(" "))+'</option>';
+                //ext += '<option>'+Q.tool.get_unit(value.split(" "))+'</option>';
+                list.push(Q.tool.get_unit(value.split(" ")));
                 tmp += '<div class="valid row well answer type-' + question.type + '">' + Q.tmpl.answer.type[question.type](value.split(" ")) + '</div>'
             });
-            html += '<div class="row well answer type-' + question.type + '">' + Q.tmpl.answer.type[question.type]([],ext) + '</div>'
+            for (t = list.length; t < 5; t++) {
+                console.log(t);
+                do {
+                    var tmp2 = Q.data.units[Q.tool.random_int(0, Q.data.units.length)]
+                } while ($.inArray(tmp2,list)!==-1);
+                list.push(tmp2);
+            }
+            Q.tool.shuffle(list);
+            $(list).each(function(id, value) {
+                ext += '<option>' + value + '</option>';
+            });
+
+            html += '<div class="row well answer type-' + question.type + '">' + Q.tmpl.answer.type[question.type]([], ext) + '</div>'
             html += tmp;
             html += '<br><br><br>';
             html += '<button id="valider" onclick="$(\'.answer\').toggleClass(\'results\');$(\'#reload\').show();$(this).remove();" class="btn btn-lg btn-block btn-primary pull-right"> Valider > </button>\
@@ -16,12 +29,12 @@ Q.tmpl = {
             return html;
         },
         type: {
-            1: function(value,ext) {
+            1: function(value, ext) {
                 if (value.length === 0) {
                     return '<div class="col-xs-3" style="margin-left: 4.16%;"><input class="form-control input-lg" id="0"/></div>\n\
                         <div class="col-xs-1" > - </div>\n\
                         <div class="col-xs-3"><input id="1" class="form-control input-lg"/></div>\n\
-                        <div class="col-xs-3 col-xs-offset-1"><select class="form-control input-lg" >'+ext+'</select></div>';
+                        <div class="col-xs-3 col-xs-offset-1"><select class="form-control input-lg" >' + ext + '</select></div>';
                 } else {
                     return '<div class="col-xs-3" style="margin-left: 4.16%;"><input class="form-control input-lg" id="0" value="' + value[0] + '"/></div>\n\
                         <div class="col-xs-1" > - </div>\n\
