@@ -1,32 +1,34 @@
 Q.tmpl = {
     answer: {
-        body: function(question) {
-            var html = '<br><h2 class="well title">' + question.name + '</h2><br>'
-            var tmp = "", ext = '<option disabled selected style="display:none;" >Unit</option>', list = [];
-            $(question.value).each(function(id, value) {
-                //ext += '<option>'+Q.tool.get_unit(value.split(" "))+'</option>';
-                list.push(Q.tool.get_unit(value.split(" ")));
-                tmp += '<div class="valid row well answer type-' + question.type + '">' + Q.tmpl.answer.type[question.type](value.split(" ")) + '</div>'
-            });
-            for (t = list.length; t < 5; t++) {
-                console.log(t);
-                do {
-                    var tmp2 = Q.data.units[Q.tool.random_int(0, Q.data.units.length)]
-                } while ($.inArray(tmp2,list)!==-1);
-                list.push(tmp2);
-            }
-            Q.tool.shuffle(list);
-            $(list).each(function(id, value) {
-                ext += '<option>' + value + '</option>';
-            });
+        body: {
+            1: function(question) {
+                var html = '<br><h2 class="well title">' + question.name + '</h2><br>'
+                var tmp = "", ext = '<option disabled selected style="display:none;" >Unit</option>', list = [];
+                $(question.value).each(function(id, value) {
+                    //ext += '<option>'+Q.tool.get_unit(value.split(" "))+'</option>';
+                    list.push(Q.tool.get_unit(value.split(" ")));
+                    tmp += '<div class="valid row well answer type-' + question.type + '">' + Q.tmpl.answer.type[question.type](value.split(" ")) + '</div>'
+                });
+                for (t = list.length; t < 5; t++) {
+                    console.log(t);
+                    do {
+                        var tmp2 = Q.data.units[Q.tool.random_int(0, Q.data.units.length)]
+                    } while ($.inArray(tmp2, list) !== -1);
+                    list.push(tmp2);
+                }
+                Q.tool.shuffle(list);
+                $(list).each(function(id, value) {
+                    ext += '<option>' + value + '</option>';
+                });
 
-            html += '<div class="row well answer type-' + question.type + '">' + Q.tmpl.answer.type[question.type]([], ext) + '</div>'
-            html += tmp;
-            html += '<br><br><br>';
-            html += '<button id="valider" onclick="$(\'.answer\').toggleClass(\'results\');$(\'#reload\').show();$(this).remove();" class="btn btn-lg btn-block btn-primary pull-right"> Valider > </button>\
+                html += '<div class="row well answer type-' + question.type + '">' + Q.tmpl.answer.type[question.type]([], ext) + '</div>'
+                html += tmp;
+                html += '<br><br><br>';
+                html += '<button id="valider" onclick="$(\'.answer\').toggleClass(\'results\');$(\'#reload\').show();$(this).remove();" class="btn btn-lg btn-block btn-primary pull-right"> Valider > </button>\
             <button id="reload" style="display: none;" onclick="window.location.reload();" class="btn btn-lg btn-block btn-primary pull-right"> Réessayer </button>'
 
-            return html;
+                return html;
+            }
         },
         type: {
             1: function(value, ext) {

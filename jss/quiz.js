@@ -47,7 +47,7 @@ var Q = {
     type: {
         answer: {
             1: function(question) {
-                $("body>.container").html(Q.tmpl.answer.body(question))
+                $("body>.container").html(Q.tmpl.answer.body[1](question))
                 //$(".choices").append(Q.tmpl.choice.type[1](id, data));
                 $("#valider").on("click", function() {
                     var rep = $(".answer input").eq(0).val().replace(",", ".") + " - " + $(".answer input").eq(1).val().replace(",", ".") + " " + $(".answer select").eq(0).val();
