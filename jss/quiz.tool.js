@@ -68,7 +68,7 @@ Q.tool = {
                     ret.value = [(valid.value[0] + Q.tool.random_int(-5, 5) * valid.pgcd)];
                     ret.value[1] = ret.value[0] + (valid.value[1] - valid.value[0] + Q.tool.random_int(-2, 2) * valid.pgcd);
                     //DEBUG ret.value = [10,20];
-                } while (ret.value[0] < 0 || ret.value[1] < 0 || ret.value[1] <= ret.value[0] || ret.value[0] == valid.value[0] || (ret.unit == "%" && ret.value[1] > 100))
+                } while (ret.value[0] < 0 || ret.value[1] < 0 || ret.value[1]-0.01 <= ret.value[0] || ret.value[0] == valid.value[0] || (ret.unit == "%" && ret.value[1] > 100))
                 break;
         }
 
