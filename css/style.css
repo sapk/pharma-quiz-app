@@ -43,3 +43,10 @@ body {
     display: block;
     background: rgba(57,179,215,0.8);
 }
+.answer select{
+    padding: 4px;
+}
+.answer .col-xs-1,.answer .col-xs-3,.answer .col-xs-4{
+    padding-right: 5px;
+    padding-left: 5px;
+}
