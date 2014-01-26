@@ -10,7 +10,7 @@ Q.tmpl = {
                     tmp += '<div class="valid row well answer type-' + question.type + '">' + Q.tmpl.answer.type[question.type](value.split(" ")) + '</div>'
                 });
                 for (t = list.length; t < 5; t++) {
-                    console.log(t);
+                   // console.log(t);
                     do {
                         var tmp2 = Q.data.units[Q.tool.random_int(0, Q.data.units.length)]
                     } while ($.inArray(tmp2, list) !== -1);
