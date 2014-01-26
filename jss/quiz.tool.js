@@ -75,19 +75,21 @@ Q.tool = {
         console.log(ret);
         return ret;
     },
+    get_unit : function (val){
+        var unit = val[3];
+        for (i = 4; i < val.length; i++)
+            unit += " " + val[4];
+        return unit;
+    },
     get_valid_value: function(question) {
         console.log(["get_valid_value()", question]);
         var id = Math.floor((Math.random() * question.value.length));
         var val = question.value[id].split(" ");
         var ret = {
             type: question.type,
-            unit: val[3],
+            unit: Q.tool.get_unit(val),
             is_valid: true
         };
-
-        for (i = 4; i < val.length; i++)
-            ret.unit += " " + val[4];
-
 
         switch (ret.type) {
             case 1 :
