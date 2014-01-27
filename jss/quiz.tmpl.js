@@ -38,10 +38,10 @@ Q.tmpl = {
                         <div class="col-xs-4"><input id="1" class="form-control input-lg"/></div>\n\
                         <div class="col-xs-3"><select class="form-control input-lg" >' + ext + '</select></div>';
                 } else {
-                    return '<div class="col-xs-4"><input class="form-control input-lg" id="0" value="' + value[0] + '"/></div>\n\
+                    return '<div class="col-xs-4"><input  disabled class="form-control input-lg" id="0" value="' + value[0] + '"/></div>\n\
                         <div class="col-xs-1" > - </div>\n\
-                        <div class="col-xs-4"><input id="1" class="form-control input-lg"  value="' + value[2] + '"/></div>\n\
-                        <div class="col-xs-3"><select class="form-control input-lg" ><option disabled selected style="display:none;" >' + Q.tool.get_unit(value) + '</option></select></div>';
+                        <div class="col-xs-4"><input disabled id="1" class="form-control input-lg"  value="' + value[2] + '"/></div>\n\
+                        <div class="col-xs-3"><select disabled class="form-control input-lg" ><option disabled selected style="display:none;" >' + Q.tool.get_unit(value) + '</option></select></div>';
                 }
             }
         }
