@@ -1,7 +1,9 @@
 Q.data = {
+    signs : ["<",">","="],
     units : ["µmol/L","mg/L","g/L","mg","mmol","mmol/L","mU/L","µg","nmol","nmol/L","µg/L","ng/L","pmol/L","mL/s","mL/min","mmol/kg d’eau","mmHg","mOsm/kg d’eau"," ","%","mg/L (P)"],
     values : [
 //      {name : "", value : ["",""], type : 1 },
+        /*
         {name : "Se ou Pl Créatinine - Homme", value : ["60 - 115 µmol/L","7 - 13 mg/L"], type : 1 },
         {name : "Se ou Pl Créatinine - Femme", value : ["45 - 105 µmol/L","5 - 12 mg/L"], type : 1 },
         {name : "Se ou Pl Urate - Homme", value : ["180 - 420 µmol/L","30 - 70 mg/L"], type : 1 },
@@ -29,13 +31,19 @@ Q.data = {
         {name : "SgA Oxyhémoglobine/Hémoglobine totale (SaO2)", value : ["0.94 - 1.00 ","94 - 100 %"], type : 1 },
         {name : "SgA Bicarbonate", value : ["23 - 27 mmol/L"], type : 1 },
         {name : "SgA CO2 total", value : ["25 - 30 mmol/L"], type : 1 },
-        /*
-        Se Alanine aminotransférase (ALAT, TGP) < 45 UI/L < 34 UI/L
-        Se Aspartate aminotransférase (ASAT, TGO) < 35 UI/L < 35 UI/L
-        Se Créatine kinase (CK) <171 UI/L < 145 UI/L
-        Se Gamma glutamyltransférase (GGT) < 55 UI/L < 38 UI/L
-        Se Lactate déshydrogénase (LDH) < 248 UI/L < 248 UI/L
         */
+        {name : "Se Alanine aminotransférase - Homme (ALAT, TGP)", value : ["< 45 UI/L"], type : 2 },
+        {name : "Se Aspartate aminotransférase - Homme (ASAT, TGO)", value : ["< 35 UI/L"], type : 2 },
+        {name : "Se Créatine kinase - Homme (CK)", value : ["< 171 UI/L"], type : 2 },
+        {name : "Se Gamma glutamyltransférase - Homme (GGT)", value : ["< 55 UI/L"], type : 2 },
+        {name : "Se Lactate déshydrogénase - Homme (LDH)", value : ["< 248 UI/L"], type : 2 },
+        
+        {name : "Se Alanine aminotransférase (ALAT, TGP)", value : ["< 34 UI/L"], type : 2 },
+        {name : "Se Aspartate aminotransférase (ASAT, TGO)", value : ["< 35 UI/L"], type : 2 },
+        {name : "Se Créatine kinase (CK)", value : ["< 145 UI/L"], type : 2 },
+        {name : "Se Gamma glutamyltransférase (GGT)", value : ["< 38 UI/L"], type : 2 },
+        {name : "Se Lactate déshydrogénase (LDH)", value : ["< 248 UI/L"], type : 2 },
+  /*      
         {name : "Pl Glucose", value : ["3.90 - 5.50 mmol/L","0.70 - 1.00 g/L"], type : 1 },
         {name : "Pl Lactate", value : ["0.50 - 2.0 mmol/L","45 - 180 mg/L"], type : 1 },
         {name : "LCR Glucose", value : ["2.50 - 3.50 mmol/L","0.45 - 0.65 g/L"], type : 1 },
@@ -49,12 +57,13 @@ Q.data = {
  Se ou Pl Bilirubine conjuguée 0 µmol/L 0 mg/L
  Se ou Pl Bilirubine non conjuguée < 17 µmol/L < 10 mg/L
 */
+/*
         {name : "Se ou Pl Tétra-iodothyronine libre (T4L)", value : ["10 - 23 pmol/L","8 - 18 ng/L"], type : 1 },
         {name : "Se ou Pl Hormone thyréotrope (TSH)", value : ["1,8 - 36 pmol/L","0,3 - 6 mU/L"], type : 1 },
         {name : "Pl (8h) Cortisol total", value : ["275 - 555 nmol/L","100 - 200 µg/L"], type : 1 },
         {name : "dU Cortisol libre", value : ["80 - 270 nmol","30 - 100 µg"], type : 1 },
         /* Bilan lipidique normal chez un patient sans facteur de risque */
-        {name : "Se Cholestérol total", value : ["4,10 - 5,20 mmol/L","1,6 - 2,0 g/L"], type : 1 },
+/*        {name : "Se Cholestérol total", value : ["4,10 - 5,20 mmol/L","1,6 - 2,0 g/L"], type : 1 },
         {name : "Se Triglycérides", value : ["0,40 - 1,70 mmol/L","0,35 - 1,50 g/L"], type : 1 },
         /*
 Se Cholestérol HDL > 1,0 mmol/L > 0,40 g/L
@@ -65,6 +74,7 @@ En présence de 2 facteurs de risque < 4,1 mmol/L < 1,60 g/L
 En présence de plus de 2 facteurs de risque < 3,4 mmol/L < 1,30 g/L
 En cas d’antécédent cardiovasculaire < 2,6 mmol/L < 1,00 g/L
 PROTEINES */
+/*
         {name : "Se Protéines", value : ["65 - 80 g/L"], type : 1 },
         {name : "LCR Protéines", value : ["0,15 - 0,30 g/L"], type : 1 },
         {name : "Se Haptoglobine", value : ["1 - 3 g/L"], type : 1 },
@@ -72,13 +82,14 @@ PROTEINES */
 /*
 Se Protéine C Réactive (CRP) < 5 mg/L
 */
+/*
         {name : "Se Transferrine", value : ["2 - 4 g/L"], type : 1 },
         {name : "(H) Se Ferritine", value : ["20 - 250 µg/L"], type : 1 },
         {name : "(F) Se Ferritine", value : ["15 - 150 µg/L"], type : 1 },
         {name : "Se Immunoglobulines A (IgA)", value : ["0,80 - 3,60 g/L"], type : 1 },
         {name : "Se Immunoglobulines G (IgG)", value : ["7 - 15 g/L"], type : 1 },
         {name : "Se Immunoglobulines M (IgM)", value : ["0,5 - 2,3 g/L"], type : 1 },
-
+*/
     ]
 };
 //http://www.cnci.univ-paris5.fr/pharmacie/Constantes_biologiques_adultes_2009.pdf

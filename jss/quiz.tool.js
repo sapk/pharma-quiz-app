@@ -20,11 +20,11 @@ Q.tool = {
 
         return array;
     },
-    inArray: function (f,list,id){
+    inArray: function(f, list, id) {
         var i = -1;
-        $(list).each(function (id,data){
-      //      console.log([JSON.stringify(data.value),JSON.stringify(f.value)]);
-            if(JSON.stringify(data.value) == JSON.stringify(f.value)){
+        $(list).each(function(id, data) {
+            //      console.log([JSON.stringify(data.value),JSON.stringify(f.value)]);
+            if (JSON.stringify(data.value) == JSON.stringify(f.value)) {
                 console.log(id);
                 i = id;
             }
@@ -68,16 +68,29 @@ Q.tool = {
                     ret.value = [(valid.value[0] + Q.tool.random_int(-5, 5) * valid.pgcd)];
                     ret.value[1] = ret.value[0] + (valid.value[1] - valid.value[0] + Q.tool.random_int(-2, 2) * valid.pgcd);
                     //DEBUG ret.value = [10,20];
-                } while (ret.value[0] < 0 || ret.value[1] < 0 || ret.value[1]-0.01 <= ret.value[0] || ret.value[0] == valid.value[0] || (ret.unit == "%" && ret.value[1] > 100))
+                } while (ret.value[0] < 0 || ret.value[1] < 0 || ret.value[1] - 0.01 <= ret.value[0] || ret.value[0] == valid.value[0] || (ret.unit == "%" && ret.value[1] > 100))
+                break;
+            case 2 :
+                do {
+                    ret.value = [Q.data.signs[Q.tool.random_int(0, Q.data.signs.length-1)], (valid.value[1] + Q.tool.random_int(-5, 5) * valid.pgcd)];
+                } while (ret.value[1] < 0 || (ret.unit == "%" && ret.value[1] > 100))
                 break;
         }
 
         console.log(ret);
         return ret;
     },
-    get_unit : function (val){
-        var unit = val[3];
-        for (i = 4; i < val.length; i++)
+    get_unit: function(val, type) {
+        switch (type) {
+            case 1 :
+                var start = 3;
+                break;
+            case 2 :
+                var start = 2;
+                break;
+        }
+        var unit = val[start];
+        for (i = start + 1; i < val.length; i++)
             unit += " " + val[4];
         return unit;
     },
@@ -87,22 +100,25 @@ Q.tool = {
         var val = question.value[id].split(" ");
         var ret = {
             type: question.type,
-            unit: Q.tool.get_unit(val),
+            unit: Q.tool.get_unit(val, question.type),
             is_valid: true
         };
 
         switch (ret.type) {
             case 1 :
-                ret.value = [parseFloat(val[0]), parseFloat(val[2])]
+                ret.value = [parseFloat(val[0]), parseFloat(val[2])];
+                ret.pgcd = Q.tool.pgcd(ret.value);
                 break;
-
+            case 2 :
+                ret.value = [val[0], parseFloat(val[1])];
+                ret.pgcd = Q.tool.pgcd([ret.value[1],1000]);
+                break;
         }
 
-        ret.pgcd = Q.tool.pgcd(ret.value);
 
         ret.pres = 0;
-        if (val[2].split(".").length == 2)
-            ret.pres = val[2].split(".")[1].length;
+        if (("" + ret.value[1]).split(".").length === 2)
+            ret.pres = ("" + ret.value[1]).split(".")[1].length;
 
         console.log(ret);
         return ret;
@@ -115,4 +131,4 @@ Q.tool = {
         console.log(d);
         return d;
     }
-}
+};
