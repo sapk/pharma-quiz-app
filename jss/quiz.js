@@ -27,7 +27,9 @@ var Q = {
             console.log(rep);
             console.log(question.value);
             console.log($.inArray(rep, question.value));
-            if ($.inArray(rep, question.value) !== -1) {
+            if (rep === " -  Unit" || rep === "Sign  Unit") {
+                $(".answer").eq(0).addClass("has-empty").css('opacity', '0.5');
+            } else if ($.inArray(rep, question.value) !== -1) {
                 $(".answer").eq(0).addClass("has-success").css("background", "rgba(160,220,160,0.8)");
             } else {
                 $(".answer").eq(0).addClass("has-error").css("background", "rgba(237,156,40,0.8)");
@@ -36,12 +38,38 @@ var Q = {
             $('.answer').toggleClass('results');
             $('#reload').show();
             $('#valider').remove();
+
+            var tmp = window.localStorage.getItem(question.name);
+            console.log(tmp);
+            if (tmp && tmp.lenght >= 4) {
+                tmp[0] += $(".answer.has-success").length;
+                tmp[1] += $(".answer.has-error").length;
+                tmp[2] += $(".answer.has-empty").length;
+            } else {
+                tmp = [$(".answer.has-success").length, $(".answer.has-error").length, $(".answer.has-empty").length];
+            }
+            tmp[3] = (new Date()).getTime();
+            console.log(tmp);
+            window.localStorage.setItem(question.name, JSON.stringify(tmp));
         },
         choice: function(question) {
             $('.choices a').attr('onclick', '');
             $('.choices').toggleClass('results');
             $('#reload').show();
             $('#valider').remove();
+
+            var tmp = window.localStorage.getItem(question.name);
+            console.log(tmp);
+            if (tmp && tmp.lenght >= 4) {
+                tmp[0] += ($("a[data-good='true'].btn-success").length >= 1)?1:0;
+                tmp[1] += ($("a[data-good='false'].btn-success").length >= 1)?1:0;
+                tmp[2] += ($("a.btn-success").length == 0)?1:0;
+            } else {
+                tmp = [($("a[data-good='true'].btn-success").length >= 1)?1:0, ($("a[data-good='false'].btn-success").length >= 1)?1:0,($("a.btn-success").length == 0)?1:0];
+            }
+            tmp[3] = (new Date()).getTime();
+            console.log(tmp);
+            window.localStorage.setItem(question.name, JSON.stringify(tmp));
         }
     },
     type: {
