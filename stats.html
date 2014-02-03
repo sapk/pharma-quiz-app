@@ -46,7 +46,7 @@
                                 var obj = window.localStorage.key(i);
                                 var data = JSON.parse(window.localStorage.getItem(obj));
                                 console.log([obj,data]);
-                                $(".btn-group-vertical").append('<a class="btn btn-default">'+obj+' <span class="pull-right">'+100*(data[0]/(data[0]+data[1]+data[2]))+'%</span></a>')
+                                $(".btn-group-vertical").append('<a class="btn btn-lg btn-default">'+obj+' <span class="pull-right">'+100*(data[0]/(data[0]+data[1]+data[2]))+'%</span></a>')
                             }
                         });
         </script>
