@@ -52,8 +52,8 @@ Q.data = {
         {name : "(F) Sg Hémoglobine", value : ["120 - 160 g/L"], type : 1 },
 //*/
         {name : "Sg Hémoglobine A2 / Hémoglobine totale", value : ["< 0.035 &nbsp;","< 3.5 %"], type : 2 },
-        {name : "Sg Hémoglobine A1c / Hémoglobine totale", value : ["< 0.06 &nbsp;","< 6 %"], type : 2 },
- /*       {name : "Se ou Pl Bilirubine totale", value : ["< 17 µmol/L","< 10 mg/L"], type : 2 },
+ /*       {name : "Sg Hémoglobine A1c / Hémoglobine totale", value : ["< 0.06 &nbsp;","< 6 %"], type : 2 },
+        {name : "Se ou Pl Bilirubine totale", value : ["< 17 µmol/L","< 10 mg/L"], type : 2 },
         {name : "Se ou Pl Bilirubine conjuguée", value : ["= 0 µmol/L","= 0 mg/L"], type : 2 },
         {name : "Se ou Pl Bilirubine non conjuguée", value : ["< 17 µmol/L","< 10 mg/L"], type : 2 },
 
