@@ -3,10 +3,12 @@ body {
     padding-top: 50px;
 }
 .navbar-brand{
-    margin-left: -22px;
+    /* margin-left: -22px; */
+    font-size: 140%;
+    font-weight: bolder;
 }
 .navbar-toggle{
-    display: block;
+    display: inline-block;
 }
 .menu{
     width: 0;
@@ -63,7 +65,7 @@ body {
 
 .navbar-brand>img {
     height: 35px;
-    margin: -15px 3px -15px 0px;
+    margin: -18px 3px -15px 0px;
 }
 .answer {
     margin-right: 0px;
