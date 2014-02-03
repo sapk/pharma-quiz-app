@@ -63,6 +63,7 @@ Q.data = {
         {name : "dU Cortisol libre", value : ["80 - 270 nmol","30 - 100 µg"], type : 1 },
         /* Bilan lipidique normal chez un patient sans facteur de risque */
        {name : "Se Cholestérol total", value : ["4.10 - 5.20 mmol/L","1.6 - 2.0 g/L"], type : 1 },
+       /* TODO fix bug for trail 0 or not.*/
         {name : "Se Triglycérides", value : ["0.40 - 1.70 mmol/L","0.35 - 1.50 g/L"], type : 1 },
         
         {name : "Se Cholestérol HDL", value : ["> 1.0 mmol/L","> 0.40 g/L"], type : 2 },

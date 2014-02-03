@@ -42,12 +42,17 @@
         <script >
                         $(document).on('ready', function() {
                             i = -1;
+                            var tmp = [0,0,0];
                             while (window.localStorage.key(++i)) {
                                 var obj = window.localStorage.key(i);
                                 var data = JSON.parse(window.localStorage.getItem(obj));
                                 console.log([obj,data]);
-                                $(".btn-group-vertical").append('<a class="btn btn-lg btn-default">'+obj+' <span class="pull-right">'+100*(data[0]/(data[0]+data[1]+data[2]))+'%</span></a>')
+                                $(tmp).each(function (id){
+                                    tmp[id] += data[id];
+                                })
+                                $(".btn-group-vertical").append('<a class="btn btn-lg btn-default">'+obj+' <span class="pull-right">'+100*(data[0]/(data[0]+data[1]+data[2]))+'% </span></a>')
                             }
+                            $("body>.container").prepend('<br><br><a class="btn btn-block btn-lg btn-info">Total : <span class="pull-right" style="margin-right:16px;">'+100*(tmp[0]/(tmp[0]+tmp[1]+tmp[2]))+'% </span></a>')
                         });
         </script>
     </body>
