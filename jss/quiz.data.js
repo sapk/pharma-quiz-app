@@ -3,7 +3,7 @@ Q.data = {
     units : ["µmol/L","mg/L","g/L","mg","mmol","mmol/L","mU/L","µg","nmol","nmol/L","µg/L","ng/L","pmol/L","mL/s","mL/min","mmol/kg d’eau","mmHg","mOsm/kg d’eau"," ","%","mg/L (P)"],
     values : [
 //      {name : "", value : ["",""], type : 1 },
-  /*      
+      
         {name : "Se ou Pl Créatinine - Homme", value : ["60 - 115 µmol/L","7 - 13 mg/L"], type : 1 },
         {name : "Se ou Pl Créatinine - Femme", value : ["45 - 105 µmol/L","5 - 12 mg/L"], type : 1 },
         {name : "Se ou Pl Urate - Homme", value : ["180 - 420 µmol/L","30 - 70 mg/L"], type : 1 },
@@ -52,7 +52,7 @@ Q.data = {
         {name : "(F) Sg Hémoglobine", value : ["120 - 160 g/L"], type : 1 },
 //*/
         {name : "Sg Hémoglobine A2 / Hémoglobine totale", value : ["< 0.035 &nbsp;","< 3.5 %"], type : 2 },
- /*       {name : "Sg Hémoglobine A1c / Hémoglobine totale", value : ["< 0.06 &nbsp;","< 6 %"], type : 2 },
+        {name : "Sg Hémoglobine A1c / Hémoglobine totale", value : ["< 0.06 &nbsp;","< 6 %"], type : 2 },
         {name : "Se ou Pl Bilirubine totale", value : ["< 17 µmol/L","< 10 mg/L"], type : 2 },
         {name : "Se ou Pl Bilirubine conjuguée", value : ["= 0 µmol/L","= 0 mg/L"], type : 2 },
         {name : "Se ou Pl Bilirubine non conjuguée", value : ["< 17 µmol/L","< 10 mg/L"], type : 2 },
@@ -62,7 +62,7 @@ Q.data = {
         {name : "Pl (8h) Cortisol total", value : ["275 - 555 nmol/L","100 - 200 µg/L"], type : 1 },
         {name : "dU Cortisol libre", value : ["80 - 270 nmol","30 - 100 µg"], type : 1 },
         /* Bilan lipidique normal chez un patient sans facteur de risque */
- /*       {name : "Se Cholestérol total", value : ["4.10 - 5.20 mmol/L","1.6 - 2.0 g/L"], type : 1 },
+       {name : "Se Cholestérol total", value : ["4.10 - 5.20 mmol/L","1.6 - 2.0 g/L"], type : 1 },
         {name : "Se Triglycérides", value : ["0.40 - 1.70 mmol/L","0.35 - 1.50 g/L"], type : 1 },
         
         {name : "Se Cholestérol HDL", value : ["> 1.0 mmol/L","> 0.40 g/L"], type : 2 },
@@ -75,7 +75,7 @@ En présence de plus de 2 facteurs de risque < 3,4 mmol/L < 1,30 g/L
 En cas d’antécédent cardiovasculaire < 2,6 mmol/L < 1,00 g/L
 PROTEINES */
 
-/*        {name : "Se Protéines", value : ["65 - 80 g/L"], type : 1 },
+        {name : "Se Protéines", value : ["65 - 80 g/L"], type : 1 },
         {name : "LCR Protéines", value : ["0.15 - 0.30 g/L"], type : 1 },
         {name : "Se Haptoglobine", value : ["1 - 3 g/L"], type : 1 },
         {name : "Se orosomucoïde (α1 glycoprotéine acide)", value : ["0.4 - 1.3 g/L"], type : 1 },
@@ -88,6 +88,6 @@ PROTEINES */
         {name : "Se Immunoglobulines A (IgA)", value : ["0.80 - 3.60 g/L"], type : 1 },
         {name : "Se Immunoglobulines G (IgG)", value : ["7 - 15 g/L"], type : 1 },
         {name : "Se Immunoglobulines M (IgM)", value : ["0.5 - 2.3 g/L"], type : 1 },
-*/    ]
+    ]
 };
 //http://www.cnci.univ-paris5.fr/pharmacie/Constantes_biologiques_adultes_2009.pdf

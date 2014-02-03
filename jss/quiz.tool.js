@@ -33,21 +33,33 @@ Q.tool = {
 //        return $.inArray(f,list,id);
     },
     pgcd: function(t) {
+        console.log(t);
         var indice = 1
         var a = t[0], b = t[1];
         while (parseInt(a) != a || parseInt(b) != b) {
             a *= 10;
             b *= 10;
             indice *= 10;
-            if (indice > 1000)
-                return;
+            if (indice > 100)
+                break;
+
+            console.log(indice);
+            console.log(a);
         }
-        while (a != b) {
+        a = parseInt(a);
+        b = parseInt(b);
+        console.log(a);
+        console.log(b);
+        while (a != b && a*b != 0) {
             if (a > b)
                 a -= b;
             else
                 b -= a;
+            console.log(a);
+            console.log(b);
         }
+        console.log(a);
+        console.log(a / indice);
         return a / indice;
     },
     random_int: function(from, to) {
@@ -72,7 +84,7 @@ Q.tool = {
                 break;
             case 2 :
                 do {
-                    ret.value = [Q.data.signs[Q.tool.random_int(0, Q.data.signs.length-1)], (valid.value[1] + Q.tool.random_int(-5, 5) * valid.pgcd)];
+                    ret.value = [Q.data.signs[Q.tool.random_int(0, Q.data.signs.length - 1)], (valid.value[1] + Q.tool.random_int(-5, 5) * valid.pgcd)];
                 } while (ret.value[1] < 0 || (ret.unit == "%" && ret.value[1] > 100))
                 break;
         }
@@ -111,7 +123,7 @@ Q.tool = {
                 break;
             case 2 :
                 ret.value = [val[0], parseFloat(val[1])];
-                ret.pgcd = Q.tool.pgcd([ret.value[1],1000]);
+                ret.pgcd = Q.tool.pgcd([ret.value[1], 300]);
                 break;
         }
 
@@ -126,7 +138,7 @@ Q.tool = {
     get_question: function() {
         console.log(["get_question()"]);
         var i = Math.floor((Math.random() * Q.data.values.length));
-        alert(i);
+        //alert(i);
         var d = Q.data.values[i];
         d.id = i;
         console.log(d);
