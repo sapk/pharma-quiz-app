@@ -27,7 +27,7 @@ var Q = {
             console.log(rep);
             console.log(question.value);
             console.log($.inArray(rep, question.value));
-            if (rep === " -  Unit" || rep === "Sign  Unit") {
+            if (rep === "NaN - NaN Unit" || rep === "Sign NaN Unit") {
                 $(".answer").eq(0).addClass("has-empty").css('opacity', '0.5');
             } else if ($.inArray(rep, question.value) !== -1) {
                 $(".answer").eq(0).addClass("has-success").css("background", "rgba(160,220,160,0.8)");
