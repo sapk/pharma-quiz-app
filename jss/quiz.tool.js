@@ -32,25 +32,61 @@ Q.tool = {
         return i;
 //        return $.inArray(f,list,id);
     },
+    pres: function(t) {
+        var indice = 0;
+
+        var a = "" + t[0], b = "" + t[1];
+        if (a.split(".").length === 2 || b.split(".").length === 2) {
+            if (a.split(".")[1])
+                indice = a.split(".")[1].length;
+            else
+                indice = b.split(".")[1].length;
+
+            if (b.split(".")[1] && b.split(".")[1].length > a.split(".")[1].length)
+                indice = b.split(".")[1].length;
+
+//            indice = Math.pow(10, indice);
+        }
+        return indice;
+    },
     pgcd: function(t) {
         console.log(t);
-        var indice = 1
-        var a = t[0], b = t[1];
-        while (parseInt(a) != a || parseInt(b) != b) {
-            a *= 10;
-            b *= 10;
-            indice *= 10;
-            if (indice > 100)
-                break;
-        }
-        a = parseInt(a);
-        b = parseInt(b);
-        while (a != b && a*b != 0) {
+        var indice = Q.tool.pres(t);
+        indice = Math.pow(10, indice);
+        var a = "" + t[0], b = "" + t[1];
+        /*
+         if (a.split(".").length === 2 || b.split(".")[1].length) {
+         if (a.split(".")[1])
+         indice = a.split(".")[1].length;
+         else
+         indice = b.split(".")[1].length;
+         
+         if (b.split(".")[1] && b.split(".")[1].length > a.split(".")[1].length)
+         indice = b.split(".")[1].length;
+         
+         indice = Math.pow(10, indice);
+         }
+         */
+        /*
+         while (parseInt(a) != a || parseInt(b) != b) {
+         a *= 10;
+         b *= 10;
+         indice *= 10;
+         if (indice > 100)
+         break;
+         }*/
+        a = parseInt(parseFloat(a) * indice);
+        b = parseInt(parseFloat(b) * indice);
+        console.log(a)
+        console.log(indice)
+        while (a != b && a * b != 0) {
             if (a > b)
                 a -= b;
             else
                 b -= a;
         }
+        console.log(a)
+        console.log(indice)
         return a / indice;
     },
     random_int: function(from, to) {
@@ -110,18 +146,22 @@ Q.tool = {
         switch (ret.type) {
             case 1 :
                 ret.value = [parseFloat(val[0]), parseFloat(val[2])];
+                ret.pres = Q.tool.pres(ret.value);
                 ret.pgcd = Q.tool.pgcd(ret.value);
                 break;
             case 2 :
                 ret.value = [val[0], parseFloat(val[1])];
+                ret.pres = Q.tool.pres([ret.value[1], 300]);
                 ret.pgcd = Q.tool.pgcd([ret.value[1], 300]);
                 break;
         }
 
-
-        ret.pres = 0;
-        if (("" + ret.value[1]).split(".").length === 2)
-            ret.pres = ("" + ret.value[1]).split(".")[1].length;
+        /*
+         ret.pres = 0;
+         if (("" + ret.value[1]).split(".").length === 2)
+         ret.pres = ("" + ret.value[1]).split(".")[1].length;
+         */
+        //ret.pres = Q.tool.pres(t);
 
         console.log(ret);
         return ret;
