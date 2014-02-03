@@ -3,7 +3,7 @@ Q.data = {
     units : ["µmol/L","mg/L","g/L","mg","mmol","mmol/L","mU/L","µg","nmol","nmol/L","µg/L","ng/L","pmol/L","mL/s","mL/min","mmol/kg d’eau","mmHg","mOsm/kg d’eau"," ","%","mg/L (P)"],
     values : [
 //      {name : "", value : ["",""], type : 1 },
-        
+  /*      
         {name : "Se ou Pl Créatinine - Homme", value : ["60 - 115 µmol/L","7 - 13 mg/L"], type : 1 },
         {name : "Se ou Pl Créatinine - Femme", value : ["45 - 105 µmol/L","5 - 12 mg/L"], type : 1 },
         {name : "Se ou Pl Urate - Homme", value : ["180 - 420 µmol/L","30 - 70 mg/L"], type : 1 },
@@ -50,10 +50,10 @@ Q.data = {
 
         {name : "(H) Sg Hémoglobine", value : ["130 - 170 g/L"], type : 1 },
         {name : "(F) Sg Hémoglobine", value : ["120 - 160 g/L"], type : 1 },
-
+//*/
         {name : "Sg Hémoglobine A2 / Hémoglobine totale", value : ["< 0,035 ","< 3,5 %"], type : 2 },
         {name : "Sg Hémoglobine A1c / Hémoglobine totale", value : ["< 0,06 ","< 6 %"], type : 2 },
-        {name : "Se ou Pl Bilirubine totale", value : ["< 17 µmol/L","< 10 mg/L"], type : 2 },
+/*        {name : "Se ou Pl Bilirubine totale", value : ["< 17 µmol/L","< 10 mg/L"], type : 2 },
         {name : "Se ou Pl Bilirubine conjuguée", value : ["= 0 µmol/L","= 0 mg/L"], type : 2 },
         {name : "Se ou Pl Bilirubine non conjuguée", value : ["< 17 µmol/L","< 10 mg/L"], type : 2 },
 
