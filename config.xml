@@ -21,4 +21,5 @@
     
     <preference name="SplashScreenDelay" value="1000" />
     
+    <feature name="http://api.phonegap.com/1.0/storage"/>
 </widget>
