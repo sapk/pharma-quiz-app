@@ -51,22 +51,22 @@ Q.data = {
         {name : "(H) Sg Hémoglobine", value : ["130 - 170 g/L"], type : 1 },
         {name : "(F) Sg Hémoglobine", value : ["120 - 160 g/L"], type : 1 },
 //*/
-        {name : "Sg Hémoglobine A2 / Hémoglobine totale", value : ["< 0,035 ","< 3,5 %"], type : 2 },
-        {name : "Sg Hémoglobine A1c / Hémoglobine totale", value : ["< 0,06 ","< 6 %"], type : 2 },
-/*        {name : "Se ou Pl Bilirubine totale", value : ["< 17 µmol/L","< 10 mg/L"], type : 2 },
+        {name : "Sg Hémoglobine A2 / Hémoglobine totale", value : ["< 0.035  ","< 3.5 %"], type : 2 },
+        {name : "Sg Hémoglobine A1c / Hémoglobine totale", value : ["< 0.06  ","< 6 %"], type : 2 },
+ /*       {name : "Se ou Pl Bilirubine totale", value : ["< 17 µmol/L","< 10 mg/L"], type : 2 },
         {name : "Se ou Pl Bilirubine conjuguée", value : ["= 0 µmol/L","= 0 mg/L"], type : 2 },
         {name : "Se ou Pl Bilirubine non conjuguée", value : ["< 17 µmol/L","< 10 mg/L"], type : 2 },
 
         {name : "Se ou Pl Tétra-iodothyronine libre (T4L)", value : ["10 - 23 pmol/L","8 - 18 ng/L"], type : 1 },
-        {name : "Se ou Pl Hormone thyréotrope (TSH)", value : ["1,8 - 36 pmol/L","0,3 - 6 mU/L"], type : 1 },
+        {name : "Se ou Pl Hormone thyréotrope (TSH)", value : ["1.8 - 36 pmol/L","0.3 - 6 mU/L"], type : 1 },
         {name : "Pl (8h) Cortisol total", value : ["275 - 555 nmol/L","100 - 200 µg/L"], type : 1 },
         {name : "dU Cortisol libre", value : ["80 - 270 nmol","30 - 100 µg"], type : 1 },
         /* Bilan lipidique normal chez un patient sans facteur de risque */
-        {name : "Se Cholestérol total", value : ["4,10 - 5,20 mmol/L","1,6 - 2,0 g/L"], type : 1 },
-        {name : "Se Triglycérides", value : ["0,40 - 1,70 mmol/L","0,35 - 1,50 g/L"], type : 1 },
+ /*       {name : "Se Cholestérol total", value : ["4.10 - 5.20 mmol/L","1.6 - 2.0 g/L"], type : 1 },
+        {name : "Se Triglycérides", value : ["0.40 - 1.70 mmol/L","0.35 - 1.50 g/L"], type : 1 },
         
-        {name : "Se Cholestérol HDL", value : ["> 1,0 mmol/L","> 0,40 g/L"], type : 2 },
-        {name : "Se Cholestérol LDL", value : ["< 4,1 mmol/L","< 1,60 g/L"], type : 2 },
+        {name : "Se Cholestérol HDL", value : ["> 1.0 mmol/L","> 0.40 g/L"], type : 2 },
+        {name : "Se Cholestérol LDL", value : ["< 4.1 mmol/L","< 1.60 g/L"], type : 2 },
         /*
 Objectifs thérapeutiques : Valeurs attendues du cholestérol LDL
 En présence d’un seul facteur de risque < 4,9 mmol/L < 1,90 g/L
@@ -75,19 +75,19 @@ En présence de plus de 2 facteurs de risque < 3,4 mmol/L < 1,30 g/L
 En cas d’antécédent cardiovasculaire < 2,6 mmol/L < 1,00 g/L
 PROTEINES */
 
-        {name : "Se Protéines", value : ["65 - 80 g/L"], type : 1 },
-        {name : "LCR Protéines", value : ["0,15 - 0,30 g/L"], type : 1 },
+/*        {name : "Se Protéines", value : ["65 - 80 g/L"], type : 1 },
+        {name : "LCR Protéines", value : ["0.15 - 0.30 g/L"], type : 1 },
         {name : "Se Haptoglobine", value : ["1 - 3 g/L"], type : 1 },
-        {name : "Se orosomucoïde (α1 glycoprotéine acide)", value : ["0,4 - 1,3 g/L"], type : 1 },
+        {name : "Se orosomucoïde (α1 glycoprotéine acide)", value : ["0.4 - 1.3 g/L"], type : 1 },
 
         {name : "Se Protéine C Réactive (CRP)", value : ["< 5 mg/L"], type : 2 },
 
         {name : "Se Transferrine", value : ["2 - 4 g/L"], type : 1 },
         {name : "(H) Se Ferritine", value : ["20 - 250 µg/L"], type : 1 },
         {name : "(F) Se Ferritine", value : ["15 - 150 µg/L"], type : 1 },
-        {name : "Se Immunoglobulines A (IgA)", value : ["0,80 - 3,60 g/L"], type : 1 },
+        {name : "Se Immunoglobulines A (IgA)", value : ["0.80 - 3.60 g/L"], type : 1 },
         {name : "Se Immunoglobulines G (IgG)", value : ["7 - 15 g/L"], type : 1 },
-        {name : "Se Immunoglobulines M (IgM)", value : ["0,5 - 2,3 g/L"], type : 1 },
-    ]
+        {name : "Se Immunoglobulines M (IgM)", value : ["0.5 - 2.3 g/L"], type : 1 },
+*/    ]
 };
 //http://www.cnci.univ-paris5.fr/pharmacie/Constantes_biologiques_adultes_2009.pdf
