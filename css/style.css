@@ -63,7 +63,7 @@ body {
 
 .navbar-brand>img {
     height: 35px;
-    margin: -15px 0px;
+    margin: -15px 3px -15px 0px;
 }
 .answer {
     margin-right: 0px;
