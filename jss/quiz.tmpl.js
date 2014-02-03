@@ -24,7 +24,7 @@ Q.tmpl = {
                 html += '<div class="row well well-sm answer type-' + question.type + '">' + Q.tmpl.answer.type[question.type]([], ext) + '</div>'
                 html += tmp;
                 html += '<br><br><br>';
-                html += '<button id="valider" onclick="$(\'.answer\').toggleClass(\'results\');$(\'#reload\').show();$(this).remove();" class="btn btn-lg btn-block btn-primary pull-right"> Valider > </button>\
+                html += '<button id="valider" class="btn btn-lg btn-block btn-primary pull-right"> Valider > </button>\
             <button id="reload" style="display: none;" onclick="window.location.reload();" class="btn btn-lg btn-block btn-primary pull-right"> Réessayer </button>'
 
                 return html;
@@ -55,7 +55,7 @@ Q.tmpl = {
                 html += '<div class="row well well-sm answer type-' + question.type + '">' + Q.tmpl.answer.type[question.type]([], sign, ext) + '</div>'
                 html += tmp;
                 html += '<br><br><br>';
-                html += '<button id="valider" onclick="$(\'.answer\').toggleClass(\'results\');$(\'#reload\').show();$(this).remove();" class="btn btn-lg btn-block btn-primary pull-right"> Valider > </button>\
+                html += '<button id="valider"  class="btn btn-lg btn-block btn-primary pull-right"> Valider > </button>\
             <button id="reload" style="display: none;" onclick="window.location.reload();" class="btn btn-lg btn-block btn-primary pull-right"> Réessayer </button>'
 
 
@@ -94,7 +94,7 @@ Q.tmpl = {
         body: function(question) {
             return '<br><h2 class="well title">' + question.name + '</h2><br>\
                     <div class="btn-group-vertical choices"></div><br><br><br>\
-            <button onclick="$(\'.choices a\').attr(\'onclick\',\'\');$(\'.choices\').toggleClass(\'results\');$(\'#reload\').show();$(this).remove();" class="btn btn-lg btn-block btn-primary pull-right"> Réponses </button>\
+            <button id="valider" class="btn btn-lg btn-block btn-primary pull-right"> Réponses </button>\
             <button id="reload" style="display: none;" onclick="window.location.reload();" class="btn btn-lg btn-block btn-primary pull-right"> Réessayer </button>'
         },
         type: {

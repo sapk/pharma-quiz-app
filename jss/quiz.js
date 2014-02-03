@@ -2,7 +2,7 @@ var Q = {
     init: function() {
         if (typeof navigator !== "undefined" && typeof navigator.splashscreen !== "undefined")
             navigator.splashscreen.hide();
-        
+
         var question = Q.tool.get_question();
 
         switch (Q.tool.random_int(0, 1)) {
@@ -14,36 +14,50 @@ var Q = {
                 break;
         }
     },
+    valider: {
+        answer: function(question) {
+            switch (question.type) {
+                case 1 :
+                    var rep = $(".answer input").eq(0).val().replace(",", ".") + " - " + $(".answer input").eq(1).val().replace(",", ".") + " " + $(".answer select").eq(0).val();
+                    break;
+                case 2 :
+                    var rep = $(".answer select").eq(0).val() + " " + $(".answer input").eq(0).val().replace(",", ".") + " " + $(".answer select").eq(1).val();
+                    break;
+            }
+            console.log(rep);
+            console.log(question.value);
+            console.log($.inArray(rep, question.value));
+            if ($.inArray(rep, question.value) !== -1) {
+                $(".answer").eq(0).addClass("has-success").css("background", "rgba(160,220,160,0.8)");
+            } else {
+                $(".answer").eq(0).addClass("has-error").css("background", "rgba(237,156,40,0.8)");
+            }
+
+            $('.answer').toggleClass('results');
+            $('#reload').show();
+            $('#valider').remove();
+        },
+        choice: function(question) {
+            $('.choices a').attr('onclick', '');
+            $('.choices').toggleClass('results');
+            $('#reload').show();
+            $('#valider').remove();
+        }
+    },
     type: {
         answer: {
             1: function(question) {
                 $("body>.container").html(Q.tmpl.answer.body[1](question))
                 //$(".choices").append(Q.tmpl.choice.type[1](id, data));
                 $("#valider").on("click", function() {
-                    var rep = $(".answer input").eq(0).val().replace(",", ".") + " - " + $(".answer input").eq(1).val().replace(",", ".") + " " + $(".answer select").eq(0).val();
-                    console.log(rep);
-                    console.log(question.value);
-                    console.log($.inArray(rep, question.value));
-                    if ($.inArray(rep, question.value) !== -1) {
-                        $(".answer").eq(0).addClass("has-success").css("background", "rgba(160,220,160,0.8)");
-                    } else {
-                        $(".answer").eq(0).addClass("has-error").css("background", "rgba(237,156,40,0.8)");
-                    }
+                    Q.valider.answer(question);
                 })
             },
             2: function(question) {
-                $("body>.container").html(Q.tmpl.answer.body[2](question))
+                $("body>.container").html(Q.tmpl.answer.body[2](question));
                 $("#valider").on("click", function() {
-                    var rep = $(".answer select").eq(0).val() + " " + $(".answer input").eq(0).val().replace(",", ".") + " " + $(".answer select").eq(1).val();
-                    console.log(rep);
-                    console.log(question.value);
-                    console.log($.inArray(rep, question.value));
-                    if ($.inArray(rep, question.value) !== -1) {
-                        $(".answer").eq(0).addClass("has-success").css("background", "rgba(160,220,160,0.8)");
-                    } else {
-                        $(".answer").eq(0).addClass("has-error").css("background", "rgba(237,156,40,0.8)");
-                    }
-                })
+                    Q.valider.answer(question);
+                });
             }
         },
         choice: {
@@ -67,6 +81,9 @@ var Q = {
                     $(".choices").append(Q.tmpl.choice.type[1](id, data));
                     //$(".choices").append()
                 })
+                $("#valider").on("click", function() {
+                    Q.valider.choice(question);
+                });
             },
             2: function(question) {
                 $("body>.container").html(Q.tmpl.choice.body(question));
@@ -87,6 +104,9 @@ var Q = {
                     $(".choices").append(Q.tmpl.choice.type[2](id, data));
                     //$(".choices").append()
                 })
+                $("#valider").on("click", function() {
+                    Q.valider.choice(question);
+                });
             }
         }
     }
