@@ -18,10 +18,10 @@ var Q = {
         answer: function(question) {
             switch (question.type) {
                 case 1 :
-                    var rep = $(".answer input").eq(0).val().replace(",", ".") + " - " + $(".answer input").eq(1).val().replace(",", ".") + " " + $(".answer select").eq(0).val();
+                    var rep = parseFloat($(".answer input").eq(0).val().replace(",", ".")) + " - " + parseFloat($(".answer input").eq(1).val().replace(",", ".")) + " " + $(".answer select").eq(0).val();
                     break;
                 case 2 :
-                    var rep = $(".answer select").eq(0).val() + " " + $(".answer input").eq(0).val().replace(",", ".") + " " + $(".answer select").eq(1).val();
+                    var rep = $(".answer select").eq(0).val() + " " + parseFloat($(".answer input").eq(0).val().replace(",", ".")) + " " + $(".answer select").eq(1).val();
                     break;
             }
             console.log(rep);
