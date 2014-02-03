@@ -38,7 +38,7 @@ body.showmenu>.container{
 }
 
 .menu .nav {
-    margin-top: 50px;
+    margin-top: 52px;
 }
 .menu .nav-pills>li>a {
     border-radius: 0px;
@@ -47,6 +47,8 @@ body.showmenu>.container{
     display: none;
     font-size: small;
     font-weight: bolder;
+    margin-top: 3px;
+    border: 1px solid #333;
 }
 .menu .nav-pills>li:hover>a>.badge {
     display: inline-block;
