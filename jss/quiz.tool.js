@@ -168,8 +168,8 @@ Q.tool = {
     },
     get_question: function() {
         console.log(["get_question()"]);
-        //var i = Math.floor((Math.random() * Q.data.values.length));
-        var i = 24;
+        var i = Math.floor((Math.random() * Q.data.values.length));
+//        var i = 24;
 //alert(i);
         var d = Q.data.values[i];
         d.id = i;
