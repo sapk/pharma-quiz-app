@@ -32,6 +32,15 @@ body {
 .menu .nav-pills>li>a {
     border-radius: 0px;
 }
+.menu .nav-pills>li>a>.badge {
+    display: none;
+    font-size: small;
+    font-weight: bolder;
+}
+.menu .nav-pills>li:hover>a>.badge {
+    display: inline-block;
+}
+
 .title{
     text-align: center;
 }
