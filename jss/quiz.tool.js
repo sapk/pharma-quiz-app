@@ -33,6 +33,7 @@ Q.tool = {
 //        return $.inArray(f,list,id);
     },
     pgcd: function(t) {
+        console.log(t);
         var indice = 1
         var a = t[0], b = t[1];
         while (parseInt(a) != a || parseInt(b) != b) {
@@ -127,8 +128,9 @@ Q.tool = {
     },
     get_question: function() {
         console.log(["get_question()"]);
-        var i = Math.floor((Math.random() * Q.data.values.length));
-        //alert(i);
+        //var i = Math.floor((Math.random() * Q.data.values.length));
+        var i = 24;
+//alert(i);
         var d = Q.data.values[i];
         d.id = i;
         console.log(d);
