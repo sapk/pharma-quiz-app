@@ -33,7 +33,6 @@ Q.tool = {
 //        return $.inArray(f,list,id);
     },
     pgcd: function(t) {
-        console.log(t);
         var indice = 1
         var a = t[0], b = t[1];
         while (parseInt(a) != a || parseInt(b) != b) {
@@ -42,24 +41,15 @@ Q.tool = {
             indice *= 10;
             if (indice > 100)
                 break;
-
-            console.log(indice);
-            console.log(a);
         }
         a = parseInt(a);
         b = parseInt(b);
-        console.log(a);
-        console.log(b);
         while (a != b && a*b != 0) {
             if (a > b)
                 a -= b;
             else
                 b -= a;
-            console.log(a);
-            console.log(b);
         }
-        console.log(a);
-        console.log(a / indice);
         return a / indice;
     },
     random_int: function(from, to) {
