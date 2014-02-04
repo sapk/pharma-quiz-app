@@ -129,6 +129,7 @@ Q.data = {
         {name : "Sg Leucocytes", value : ["4 - 10 Giga/L"], type : 1 },
         
         /* Formule leucocytaire et populations lymphocytaires (Adulte) Concentration absolue */
+        //TODO check this question under 
         {name : "Polynucléaires neutrophiles", value : ["2 - 7.5 Giga/L"], type : 1 },
         {name : "Polynucléaires éosinophiles", value : ["0.04 - 0.5 Giga/L"], type : 1 },
         {name : "Polynucléaires basophiles", value : ["< 0.1 Giga/L"], type : 2 },
