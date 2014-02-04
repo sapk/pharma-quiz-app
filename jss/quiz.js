@@ -22,9 +22,17 @@ var Q = {
                     break;
                 case 2 :
                     var rep = $(".answer select").eq(0).val() + " " + parseFloat($(".answer input").eq(0).val().replace(",", ".")) + " " + $(".answer select").eq(1).val();
+                    rep = rep.replace(String.fromCharCode(160)," ");
                     break;
             }
+            //console.log(rep.charCodeAt(rep.length-1));
+            //console.log(rep.charCodeAt(rep.length-2));
             console.log(rep);
+            
+            $(question.value).each(function (id,data){
+                question.value[id] = data.replace("&nbsp;"," ");
+            });
+            
             console.log(question.value);
             console.log($.inArray(rep, question.value));
             if (rep === "NaN - NaN Unit" || rep === "Sign NaN Unit") {

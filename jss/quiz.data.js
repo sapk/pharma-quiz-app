@@ -1,6 +1,6 @@
 Q.data = {
     signs : ["<",">","="],
-    units : ["µmol/L","mg/L","g/L","mg","mmol","mmol/L","mU/L","µg","nmol","nmol/L","µg/L","ng/L","pmol/L","mL/s","mL/min","mmol/kg d’eau","mmHg","mOsm/kg d’eau"," ","%","mg/L (P)"],
+    units : ["µmol/L","mg/L","g/L","mg","mmol","mmol/L","mU/L","µg","nmol","mm","Tera/L","mL","Giga/L","nmol/L","min","µg/L","ng/L","pmol/L","mL/s","mL/min","mmol/kg d’eau","mmHg","mOsm/kg d’eau","&nbsp;","%","mg/L (P)"],
     values : [
 //      {name : "", value : ["",""], type : 1 },
       
@@ -74,7 +74,7 @@ En présence d’un seul facteur de risque < 4,9 mmol/L < 1,9 g/L
 En présence de 2 facteurs de risque < 4,1 mmol/L < 1,6 g/L
 En présence de plus de 2 facteurs de risque < 3,4 mmol/L < 1,3 g/L
 En cas d’antécédent cardiovasculaire < 2,6 mmol/L < 1 g/L
-PROTEINES */
+/* PROTEINES */
 
         {name : "Se Protéines", value : ["65 - 80 g/L"], type : 1 },
         {name : "LCR Protéines", value : ["0.15 - 0.3 g/L"], type : 1 },
@@ -89,6 +89,55 @@ PROTEINES */
         {name : "Se Immunoglobulines A (IgA)", value : ["0.8 - 3.6 g/L"], type : 1 },
         {name : "Se Immunoglobulines G (IgG)", value : ["7 - 15 g/L"], type : 1 },
         {name : "Se Immunoglobulines M (IgM)", value : ["0.5 - 2.3 g/L"], type : 1 },
+        
+        /* PROTEINOGRAMME */
+
+        {name : "Se Albumine", value : ["38 - 48 g/L"], type : 1 },
+        {name : "Se α1 globulines", value : ["1 - 3 g/L"], type : 1 },
+        {name : "Se α2 globulines", value : ["4 - 9 g/L"], type : 1 },
+        {name : "Se β globulines", value : ["5 - 10 g/L"], type : 1 },
+        {name : "Se γ globulines", value : ["7 - 15 g/L"], type : 1 },
+        
+        /* HEMOSTASE */
+
+        {name : "Sg Temps de saignement - technique d'Ivy trois points", value : ["2 - 4 min"], type : 1 },
+        {name : "Sg Temps de saignement - technique d'Ivy incision", value : ["4 - 8 min"], type : 1 },
+        {name : "Pl Temps de céphaline avec activateur (rapport malade/témoin)", value : ["0.8 - 1.2 &nbsp"], type : 1 },
+        {name : "Pl Activité du complexe prothrombinique (taux de prothrombine)", value : ["70 - 130 %"], type : 1 },
+        {name : "Pl Fibrinogène", value : ["2 - 4 g/L"], type : 1 },
+        {name : "Sg Plaquettes", value : ["150 - 450 Giga/L"], type : 1 },
+   
+        /* HEMATOLOGIE CELLULAIRE */
+        
+        {name : "(H) Sg Vitesse de sédimentation érythrocytaire (1h)", value : ["2 - 5 mm"], type : 1 },
+        {name : "(F) Sg Vitesse de sédimentation érythrocytaire (1h)", value : ["3 - 7 mm"], type : 1 },
+        {name : "(H) Volume globulaire par kg de masse corporelle", value : ["= 30 mL"], type : 2 },
+        {name : "(F) Volume globulaire par kg de masse corporelle", value : ["= 26 mL"], type : 2 },
+/*
+HEMOGRAMME
+Numération globulaire (Adulte)
+        {name : "(H) Sg Erythrocytes 4,5 - 5,7 Tera/L
+        {name : "(F) Sg Erythrocytes 4,2 - 5,2 Tera/L
+        {name : "(H) Sg Hématocrite 0,42 - 0,54 42 - 54 %
+        {name : "(F) Sg Hématocrite 0,37 - 0,47 37 - 47 %
+        {name : "(H) Sg Hémoglobine 130 - 170 g/L
+        {name : "(F) Sg Hémoglobine 120 - 160 g/L
+        {name : "Sg CCMH 32 - 35 %
+        {name : "Sg TCMH 27 - 32 pg
+        {name : "Sg VGM 80 - 100 fL
+        {name : "Sg Réticulocytes 20 - 80 Giga/L
+        {name : "Sg Leucocytes 4,0 - 10,0 Giga/L
+        
+Formule leucocytaire et populations lymphocytaires (Adulte) Concentration absolue
+        {name : "Polynucléaires neutrophiles 2 - 7,5 Giga/L
+        {name : "Polynucléaires éosinophiles 0,04 - 0,5 Giga/L
+        {name : "Polynucléaires basophiles < 0,10 Giga/L
+        {name : "Lymphocytes 1 - 4 Giga/L
+        {name : "Monocytes 0,2 - 1 Giga/L
+        {name : "Lymphocytes T CD4 0,5 - 1,6 G /L
+        {name : "Lymphocytes T CD8 0,4 - 0,8 Giga/L
+         * 
+         */
     ]
 };
 //http://www.cnci.univ-paris5.fr/pharmacie/Constantes_biologiques_adultes_2009.pdf
