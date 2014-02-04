@@ -2,6 +2,7 @@
 body {
     padding-top: 50px;
     /* padding: 0; */
+    overflow: hidden;
 }
 .navbar-brand{
     /* margin-left: -22px; */
