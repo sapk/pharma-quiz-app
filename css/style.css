@@ -48,7 +48,7 @@ body.showmenu>.container{
     font-size: small;
     font-weight: bolder;
     margin-top: 3px;
-    border: 1px solid #333;
+    border: 1px solid #666;
 }
 .menu .nav-pills>li:hover>a>.badge {
     display: inline-block;
