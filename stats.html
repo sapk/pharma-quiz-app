@@ -26,7 +26,11 @@
 
         <div class="container">
             <br><br>
-            <div class="btn-group-vertical" style="display: block;">
+            <div id="result" class="btn-group-vertical" style="display: block;">
+
+            </div>
+            <br><br>
+            <div id="notdone" class="btn-group-vertical" style="display: block;">
 
             </div>
         </div>
@@ -42,6 +46,7 @@
         </div>
         <script src="jss/zepto.min.js" ></script>
         <script >
+                        var Q = {};
                         $(document).on('ready', function() {
                             i = -1;
                             var tmp = [0, 0, 0];
@@ -52,10 +57,19 @@
                                 $(tmp).each(function(id) {
                                     tmp[id] += data[id];
                                 })
-                                $(".btn-group-vertical").append('<a class="btn btn-lg btn-default">' + obj + ' <span class="pull-right">' + (100 * (data[0] / (data[0] + data[1] + data[2]))).toFixed() + '% </span></a>')
+                                $("#result").append('<a data-id="' + escape(obj) + '" class="btn btn-lg btn-default">' + obj + ' <span class="pull-right">' + (100 * (data[0] / (data[0] + data[1] + data[2]))).toFixed() + '% </span></a>')
                             }
                             $("body>.container").prepend('<br><br><a class="btn btn-block btn-lg btn-info">Total : <span class="pull-right" style="margin-right:16px;">' + (100 * (tmp[0] / (tmp[0] + tmp[1] + tmp[2]))).toFixed() + '% </span></a>')
+
+                            $(Q.data.values).each(function(id, el) {
+                                if ($("#result a[data-id='" + escape(el.name) + "']").lenght != 1) {
+                                    $("#notdone").append('<a data-id="' + escape(el.name) + '" class="btn btn-lg btn-default disabled">' + el.name + '</a>')
+                                }else{
+                                    console.log(el);
+                                }
+                            });
                         });
         </script>
+        <script src="jss/quiz.data.js" ></script>
     </body>
 </html>
