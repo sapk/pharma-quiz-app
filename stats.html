@@ -70,7 +70,7 @@
 
                             $(Q.data.values).each(function(id, el) {
                                 if ($("#result a[data-id='" + escape(el.name) + "']").lenght != 1) {
-                                    $("#notdone").append('<a href="index.html?id=' + escape(obj) + '" data-id="' + escape(el.name) + '" class="btn btn-lg btn-default disabled">' + el.name + '</a>')
+                                    $("#notdone").append('<a href="index.html?id=' + escape(el.name) + '" data-id="' + escape(el.name) + '" class="btn btn-lg btn-default disabled">' + el.name + '</a>')
                                 }else{
                                     console.log(el);
                                 }
