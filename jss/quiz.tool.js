@@ -168,7 +168,19 @@ Q.tool = {
     },
     get_question: function() {
         console.log(["get_question()"]);
-        var i = Math.floor((Math.random() * Q.data.values.length));
+        if (window.location.search == "") {
+            var i = Math.floor((Math.random() * Q.data.values.length));
+        } else {
+            var id = unescape(window.location.search.substring(4));
+            console.log(id);
+            var i;
+            $(Q.data.values).each(function (n,el){
+                if(el.name == id)
+                    i = n;
+            });
+            //var i = Math.floor((Math.random() * Q.data.values.length));
+
+        }
         //var i = 54-7-5;
 //alert(i);
         var d = Q.data.values[i];

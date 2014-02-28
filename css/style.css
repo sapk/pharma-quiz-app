@@ -154,6 +154,9 @@ body>.container{
 #notdone{
     opacity: 0.5;
 }
+#notdone .disabled{
+    pointer-events: auto;
+}
 .pgbar{
     height: 100%;
     display: inline-block;

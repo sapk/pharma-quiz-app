@@ -25,7 +25,7 @@ Q.tmpl = {
                 html += tmp;
                 html += '<br><br><br>';
                 html += '<button id="valider" class="btn btn-lg btn-block btn-primary pull-right"> Valider > </button>\
-            <button id="reload" style="display: none;" onclick="window.location.reload();" class="btn btn-lg btn-block btn-primary pull-right"> Réessayer </button>'
+            <button id="reload" style="display: none;" onclick="window.location.href = \'index.html\';" class="btn btn-lg btn-block btn-primary pull-right"> Réessayer </button>'
 
                 return html;
             },
@@ -56,7 +56,7 @@ Q.tmpl = {
                 html += tmp;
                 html += '<br><br><br>';
                 html += '<button id="valider"  class="btn btn-lg btn-block btn-primary pull-right"> Valider > </button>\
-            <button id="reload" style="display: none;" onclick="window.location.reload();" class="btn btn-lg btn-block btn-primary pull-right"> Réessayer </button>'
+            <button id="reload" style="display: none;" onclick="window.location.href = \'index.html\';" class="btn btn-lg btn-block btn-primary pull-right"> Réessayer </button>'
 
 
                 return html;
@@ -95,7 +95,7 @@ Q.tmpl = {
             return '<br><h2 class="well title">' + question.name + '</h2><br>\
                     <div class="btn-group-vertical choices"></div><br><br><br>\
             <button id="valider" class="btn btn-lg btn-block btn-primary pull-right"> Réponses </button>\
-            <button id="reload" style="display: none;" onclick="window.location.reload();" class="btn btn-lg btn-block btn-primary pull-right"> Réessayer </button>'
+            <button id="reload" style="display: none;" onclick="window.location.href = \'index.html\';" class="btn btn-lg btn-block btn-primary pull-right"> Réessayer </button>'
         },
         type: {
             1: function(id, data) {
