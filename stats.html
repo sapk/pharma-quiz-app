@@ -30,6 +30,9 @@
 
             </div>
             <br><br>
+            <br><br>
+            <a class="btn btn-block btn-lg btn-default disabled">Non Répondues</a>
+            <br>
             <div id="notdone" class="btn-group-vertical" style="display: block;">
 
             </div>
@@ -57,7 +60,11 @@
                                 $(tmp).each(function(id) {
                                     tmp[id] += data[id];
                                 })
-                                $("#result").append('<a data-id="' + escape(obj) + '" class="btn btn-lg btn-default">' + obj + ' <span class="pull-right">' + (100 * (data[0] / (data[0] + data[1] + data[2]))).toFixed() + '% </span></a>')
+                                var per = (100 * (data[0] / (data[0] + data[1] + data[2])));
+                                var back = "background: rgba("+(200-per*2).toFixed()+","+(per*2).toFixed()+","+(200 - Math.abs(200-per*4)).toFixed()+",0.4);";
+                                /* 200 - |(200-per*4)|*/
+                                var per = per.toFixed();
+                                $("#result").append('<a data-id="' + escape(obj) + '" class="btn btn-lg btn-default">' + obj + '<span class="pgbar" style="width:'+per+'%;'+back+'" ></span> <span class="pull-right">' + per + '% </span></a>')
                             }
                             $("body>.container").prepend('<br><br><a class="btn btn-block btn-lg btn-info">Total : <span class="pull-right" style="margin-right:16px;">' + (100 * (tmp[0] / (tmp[0] + tmp[1] + tmp[2]))).toFixed() + '% </span></a>')
 

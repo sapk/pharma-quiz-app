@@ -154,3 +154,10 @@ body>.container{
 #notdone{
     opacity: 0.5;
 }
+.pgbar{
+    height: 100%;
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
