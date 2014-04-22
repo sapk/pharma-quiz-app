@@ -126,10 +126,12 @@ body.showmenu>.container{
     position: absolute;
 }
 
-.stats #result a.btn.btn-lg{
+.stats a.btn.btn-lg{
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+}
+.stats #result a.btn.btn-lg{
     padding: 10px 70px;
 }
 .stats #result .pull-right{
