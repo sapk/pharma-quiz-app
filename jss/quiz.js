@@ -27,10 +27,11 @@ var Q = {
             }
             //console.log(rep.charCodeAt(rep.length-1));
             //console.log(rep.charCodeAt(rep.length-2));
+            rep = $.trim(rep.replace("&nbsp;"," "));
             console.log(rep);
             
             $(question.value).each(function (id,data){
-                question.value[id] = data.replace("&nbsp;"," ");
+                question.value[id] = $.trim(data.replace("&nbsp;"," "));
             });
             
             console.log(question.value);
