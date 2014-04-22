@@ -132,14 +132,14 @@ body.showmenu>.container{
     white-space: nowrap;
 }
 .stats #result a.btn.btn-lg{
-    padding: 10px 75px;
+    padding: 10px 80px;
 }
 .stats #result .pull-right{
     border-left: solid 1px;
     position: absolute;
     top: 11px;
-    right: 10px;
-    min-width: 55px;
+    right: 15px;
+    min-width: 60px;
     text-align: right;
 }
 @media (min-width: 768px){
