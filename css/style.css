@@ -41,6 +41,14 @@ body.showmenu>.container{
 .menu .nav {
     margin-top: 52px;
 }
+.menu .nav a{
+    color: #ddd;
+}
+.menu .nav a:hover {
+    background: #aaa;
+    color: #333;
+    text-shadow: 0px 0px 15px #fff;
+}
 .menu .nav-pills>li>a {
     border-radius: 0px;
     font-size: 115%;
