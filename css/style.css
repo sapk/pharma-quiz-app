@@ -126,6 +126,18 @@ body.showmenu>.container{
     position: absolute;
 }
 
+.stats #result a.btn.btn-lg{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 10px 70px;
+}
+.stats #result .pull-right{
+    margin-right: -70px;
+    margin-top: -1.2em;
+    padding: 0 5px;
+    border-left: solid 1px;
+}
 @media (min-width: 768px){
     .menu {
         width:240px;
