@@ -16,7 +16,7 @@
 
     <icon src="img/icon.png" />
     
-    <preference name="phonegap-version" value="3.3.0" />
+    <preference name="phonegap-version" value="3.5.1" />
     <preference name="orienation" value="portrait" />
     
     <preference name="SplashScreenDelay" value="300" />
