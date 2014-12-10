@@ -14,7 +14,7 @@
         Antoine GIRARD 
     </author>
 
-    <icon src="img/logo.png" />
+    <icon src="img/icon.png" />
     
     <preference name="orienation" value="portrait" />
     

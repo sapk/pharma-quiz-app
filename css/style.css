@@ -5,9 +5,10 @@ body {
     overflow: hidden;
 }
 .navbar-brand{
-    /* margin-left: -22px; */
+    margin-left: -22px;
     font-size: 140%;
     font-weight: bolder;
+    margin-right: -50px;
 }
 .navbar-toggle{
     display: inline-block;
@@ -145,14 +146,14 @@ body.showmenu>.container{
     white-space: nowrap;
 }
 .stats #result a.btn.btn-lg{
-    padding: 10px 80px;
+    padding: 10px 80px 10px 10px;
 }
 .stats #result .pull-right{
     border-left: solid 1px;
     position: absolute;
     top: 11px;
-    right: 15px;
-    min-width: 60px;
+    right: 8px;
+    min-width: 58px;
     text-align: right;
 }
 @media (min-width: 768px){
