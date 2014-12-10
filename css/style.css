@@ -151,11 +151,17 @@ body.showmenu>.container{
 .stats #result .pull-right{
     border-left: solid 1px;
     position: absolute;
-    top: 11px;
-    right: 8px;
-    min-width: 58px;
-    text-align: right;
+    top: 10px;
+    right: 2px;
+    min-width: 50px;
+    text-align: center;
+    padding: 1px 0px 0 2px;
 }
+.stats #result .pull-right:after {
+    content: "%";
+    float: right;
+    
+} 
 @media (min-width: 768px){
     .menu {
         width:240px;
