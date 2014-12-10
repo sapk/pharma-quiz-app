@@ -36,12 +36,15 @@ var Q = {
             
             console.log(question.value);
             console.log($.inArray(rep, question.value));
-            if (rep === "NaN - NaN Unit" || rep === "Sign NaN Unit") {
+            if (rep === "NaN - NaN Unit" || rep === "NaN - NaN null" || rep === "Sign NaN Unit" || rep === "null NaN null") {
                 $(".answer").eq(0).addClass("has-empty").css('opacity', '0.5');
+                $('html>body').css("background", "rgba(64,164,151,0.75)");
             } else if ($.inArray(rep, question.value) !== -1) {
                 $(".answer").eq(0).addClass("has-success").css("background", "rgba(160,220,160,0.8)");
+                $('html>body').css("background", "rgba(160,220,160,1)");
             } else {
                 $(".answer").eq(0).addClass("has-error").css("background", "rgba(237,156,40,0.8)");
+                $('html>body').css("background", "rgba(237,156,40,0.75)");
             }
 
             $('.answer').toggleClass('results');
@@ -76,6 +79,14 @@ var Q = {
             } else {
                 tmp = [($("a[data-good='true'].btn-success").length >= 1)?1:0, ($("a[data-good='false'].btn-success").length >= 1)?1:0,($("a.btn-success").length == 0)?1:0];
             }
+            
+            if($("a[data-good='true'].btn-success").length >= 1)
+                $('html>body').css("background", "rgba(160,220,160,1)");
+            else if($("a[data-good='false'].btn-success").length >= 1)
+                $('html>body').css("background", "rgba(237,156,40,0.75)");
+            else
+                $('html>body').css("background", "rgba(64,164,151,0.75)");
+            
             tmp[3] = (new Date()).getTime();
             console.log(tmp);
             window.localStorage.setItem(question.name, JSON.stringify(tmp));

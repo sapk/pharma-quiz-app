@@ -113,7 +113,12 @@ body.showmenu>.container{
 .answer.results.valid{
     display: block;
     background: rgba(57,179,215,0.8);
+    border-color: #269abc;
 }
+.answer.results.has-error{
+    border-color: #d58512;
+}
+
 .answer select{
     padding: 4px;
 }
@@ -169,6 +174,10 @@ body.showmenu>.container{
     body>.container{
         padding-left: 260px;
     }
+}
+
+body{
+    transition: background 0.7s ease;
 }
 
 body>.container{

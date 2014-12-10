@@ -2,7 +2,7 @@
     <widget xmlns   = "http://www.w3.org/ns/widgets"
         xmlns:gap   = "http://phonegap.com/ns/1.0"
         id          = "fr.sapk.quizpharma"
-        version     = "1.0.9" >
+        version     = "1.1.0" >
 
     <name>Quiz Pharma</name>
 
@@ -10,13 +10,12 @@
         Une petite application de préparation de concours d'internat de pharma (Valeurs Normales)
     </description>
 
-    <author href="https://sapk.fr" email="sapk@sapk.fr">
+    <author href="https://sapk.fr" email="antoine.girard@sapk.fr">
         Antoine GIRARD 
     </author>
 
     <icon src="img/icon.png" />
     
-    <preference name="phonegap-version" value="3.5.0" />
     <preference name="orienation" value="portrait" />
     
     <preference name="SplashScreenDelay" value="300" />
