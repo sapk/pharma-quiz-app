@@ -22,7 +22,4 @@
     
     <feature name="http://api.phonegap.com/1.0/storage"/>
 
-    <gap:plugin name="com.danielcwilson.plugins.googleanalytics" source="plugins.cordova.io" />
-    <gap:plugin name="com.google.admob" source="plugins.cordova.io" />    
-    
 </widget>
