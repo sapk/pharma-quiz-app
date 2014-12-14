@@ -72,7 +72,7 @@
                             $("body>.container").prepend('<br><br><a class="btn btn-block btn-lg btn-info">Total : <span class="pull-right" style="margin-right:16px;">' + global.toFixed() + ' % </span></a>')
 
                             $(Q.data.values).each(function(id, el) {
-                                if ($("#result a[data-id='" + escape(el.name) + "']").lenght != 1) {
+                                if ($("#result a[data-id='" + escape(el.name) + "']").length !== 1) {
                                     $("#notdone").append('<a href="index.html?id=' + escape(el.name) + '" data-id="' + escape(el.name) + '" class="btn btn-lg btn-default disabled">' + el.name + '</a>')
                                 }else{
                                     console.log(el);

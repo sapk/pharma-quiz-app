@@ -2,7 +2,7 @@
     <widget xmlns   = "http://www.w3.org/ns/widgets"
         xmlns:gap   = "http://phonegap.com/ns/1.0"
         id          = "fr.sapk.quizpharma"
-        version     = "1.1.0" >
+        version     = "1.1.1" >
 
     <name>Quiz Pharma</name>
 
@@ -18,7 +18,7 @@
     
     <preference name="orienation" value="portrait" />
     
-    <preference name="SplashScreenDelay" value="100" />
+    <preference name="SplashScreenDelay" value="50" />
     
     <feature name="http://api.phonegap.com/1.0/storage"/>
 
