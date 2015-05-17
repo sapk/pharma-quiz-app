@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Quiz Pharma - Préférences</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="js/libs/twitter-bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="js/libs/twitter-bootstrap/css/material.min.css" />
+        <link rel="stylesheet" href="css/style.min.css" />
+        <link rel="icon" href="img/logo.png">
+    </head>
+    <body>
+        <div class="navbar navbar-danger navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button class="navbar-toggle pull-left" type="button" onclick="$('body').toggleClass('showmenu');">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">
+                        Quiz Pharma - Révision
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container revs">
+            <br>
+            <div id="values" class="btn-group-vertical" style="display: block;">
+
+            </div>
+        </div>
+        <br><br>
+
+        <div class="menu">
+            <ul class="nav nav-pills nav-stacked">
+                <li><a href="index.html">Questionnaire  <span class="badge pull-right">></span></a></li>
+                <li><a href="stats.html">Statistiques  <span class="badge pull-right">></span></a></li>
+                <li><a href="prefs.html">Préférences  <span class="badge pull-right">></span></a></li>
+                <li><a class="active" href="revs.html">Révisions  <span class="badge pull-right">></span></a></li>
+                <li><a href="about.html">A propos  <span class="badge pull-right">></span></a></li>
+            </ul>
+        </div>
+        <script src="js/libs/jquery/jquery.min.js" ></script>
+        <script>
+                        var Q = {};
+                        $(document).on('ready', function () {
+                            //TODO order by result in questions 
+
+                            $(Q.data.values).each(function (id, el) {
+                                $("#values").append('<a href="index.html?id=' + escape(el.name) + '" data-id="' + escape(el.name) + '" class="btn btn-lg btn-default">' + el.name + '</a>');
+                                if (el.value.length > 0) {
+                                    $("#values a[data-id='" + escape(el.name) + "']").append('<hr>');
+                                    $(el.value).each(function (vid, val) {
+                                        $("#values a[data-id='" + escape(el.name) + "']").append("<span class='res'>" + val + "</span>");
+                                    });
+                                }
+                            });
+                        });
+        </script>         
+        <script src="js/quiz.data.min.js" ></script>
+    </body>
+</html>
