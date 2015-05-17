@@ -49,14 +49,27 @@
                             //TODO order by result in questions 
 
                             $(Q.data.values).each(function (id, el) {
-                                $("#values").append('<a href="index.html?id=' + escape(el.name) + '" data-id="' + escape(el.name) + '" class="btn btn-lg btn-default">' + el.name + '</a>');
+                                $("#values").append('<a href="index.html?id=' + escape(el.name) + '" data-id="' + escape(el.name) + '" class="btn btn-lg btn-default"><h5>' + el.name + '</h5></a>');
                                 if (el.value.length > 0) {
-                                    $("#values a[data-id='" + escape(el.name) + "']").append('<hr>');
                                     $(el.value).each(function (vid, val) {
                                         $("#values a[data-id='" + escape(el.name) + "']").append("<span class='res'>" + val + "</span>");
                                     });
                                 }
                             });
+
+                            i = -1;
+                            while (window.localStorage.key(++i)) {
+                                var id = window.localStorage.key(i);
+                                var data = JSON.parse(window.localStorage.getItem(id));
+                                console.log([id, data]);
+                                var per = (100 * (data[0] / (data[0] + data[1] + data[2])));
+                                var color = "rgba(" + (200 - per * 2).toFixed() + "," + (per * 2).toFixed() + "," + (200 - Math.abs(200 - per * 4)).toFixed() + ",1)";
+                                var bgcolor = "rgba(" + (200 - per * 2).toFixed() + "," + (per * 2).toFixed() + "," + (200 - Math.abs(200 - per * 4)).toFixed() + ",0.2)";
+                                /* 200 - |(200-per*4)|*/
+                                $("#values a[data-id='" + escape(id) + "']").css("background-color", bgcolor);
+                                $("#values a[data-id='" + escape(id) + "'] h5").css("color", color).css("border-color", bgcolor);
+
+                            }
                         });
         </script>         
         <script src="js/quiz.data.min.js" ></script>

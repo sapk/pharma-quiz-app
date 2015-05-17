@@ -66,7 +66,7 @@
                                 var back = "background: rgba("+(200-per*2).toFixed()+","+(per*2).toFixed()+","+(200 - Math.abs(200-per*4)).toFixed()+",0.4);";
                                 /* 200 - |(200-per*4)|*/
                                 var per = per.toFixed();
-                                $("#result").append('<a href="index.html?id=' + escape(obj) + '" data-id="' + escape(obj) + '" class="btn btn-lg btn-default">' + obj + '<span class="pgbar" style="width:'+per+'%;'+back+'" ></span> <span class="pull-right">' + per + '</span></a>')
+                                $("#result").append('<a href="index.html?id=' + escape(obj) + '" data-id="' + escape(obj) + '" class="btn btn-lg btn-default">' + obj + '<span class="pgbar" style="width:'+(per=="0"?"1":per)+'%;'+back+'" ></span> <span class="pull-right">' + per + '</span></a>')
                             }
                             var global = (100 * (tmp[0] / (tmp[0] + tmp[1] + tmp[2])));
                             global = isNaN(global)?0:global;
