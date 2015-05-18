@@ -27,6 +27,9 @@
 
         <div class="container revs">
             <br>
+            <div class="well well-sm">
+                <input id="search" class="form-control input-lg ">
+            </div>
             <div id="values" class="btn-group-vertical" style="display: block;">
 
             </div>
@@ -70,6 +73,18 @@
                                 $("#values a[data-id='" + escape(id) + "'] h5").css("color", color).css("border-color", bgcolor);
 
                             }
+
+                            $("#search").on("keyup", function () {
+                                var search = $(this).val().toLowerCase();
+                                $("#values a[data-id]").each(function (id, el) {
+                                    console.log($(el).text());
+                                    if ($(el).find("h5").text().toLowerCase().indexOf(search) === -1) {
+                                        $(el).hide();
+                                    } else {
+                                        $(el).show();
+                                    }
+                                });
+                            });
                         });
         </script>         
         <script src="js/quiz.data.min.js" ></script>
