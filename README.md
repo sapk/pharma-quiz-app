@@ -1,7 +1,7 @@
 Quiz Pharma
 ===============
 
-Displonible sur le [Play Store](https://play.google.com/store/apps/details?id=fr.sapk.quizpharma&hl=fr)
+Disponible sur le [Play Store](https://play.google.com/store/apps/details?id=fr.sapk.quizpharma&hl=fr)
 
 ## Description
 Une petite application de préparation au concours d'internat de pharma (Valeurs Normales).
