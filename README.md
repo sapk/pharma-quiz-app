@@ -1,6 +1,9 @@
 Quiz Pharma
 ===============
 
+Displonible sur le [Play Store](https://play.google.com/store/apps/details?id=fr.sapk.quizpharma&hl=fr)
+
+## Description
 Une petite application de préparation au concours d'internat de pharma (Valeurs Normales).
 Permet de réviser la liste des valeurs normales ainsi que de vérifier quotidiennement votre connaisance de celles-ci simplement.
 
@@ -9,6 +12,6 @@ La liste des valeurs normales est disponible au sein de l'application afin de r�
 Tout est dans la poche maintenant. Bonnes révisions.
 
 
-##Ressources
+## Ressources
 Icon : 	DaPino Colada - http://www.dapino-colada.nl
 https://www.iconfinder.com/icons/38714/medical_medicine_pills_pot_icon#size=256
