@@ -12,11 +12,21 @@ android:
     - add-on
     - extra
 
+sudo: false
+cache:
+  directories:
+    - node_modules
+
 before_install:
-  - npm install uglify-js -g
+  - nvm install 7 && nvm alias default 7 && nvm use 7
+  - npm install --quiet -g npm cordova uglify-js
 
 install:
-  - uglifyjs --compress -o js/quiz.data.js js/quiz.data.js
+  - cordova prepare android
+# - npm install --quiet
 
+before_script:
+  - uglifyjs --compress -o js/quiz.data.js js/quiz.data.js
+  
 script:
   - echo "TODO"
