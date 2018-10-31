@@ -222,19 +222,19 @@ Q.data = {
         value: ["< 4.1 mmol/L", "< 1.6 g/L"],
         type: 2
     }, {
-        name: "Objectifs cholestérol LDL (risque cardio-vasculaire faible)",
+        name: "Objectifs cholestérol LDL (risque faible cardio-vasculaire)",
         value: ["< 4.9 mmol/L", "< 1.9 g/L"],
         type: 2
     }, {
-        name: "Objectifs cholestérol LDL (risque cardio-vasculaire modéré)",
+        name: "Objectifs cholestérol LDL (risque modéré cardio-vasculaire)",
         value: ["< 3.4 mmol/L", "< 1.3 g/L"],
         type: 2
     }, {
-        name: "Objectifs cholestérol LDL (risque cardio-vasculaire élevé)",
+        name: "Objectifs cholestérol LDL (risque élevé cardio-vasculaire)",
         value: ["< 2.6 mmol/L", "< 1.0 g/L"],
         type: 2
     }, {
-        name: "Objectifs cholestérol LDL (risque cardio-vasculaire très élevé)",
+        name: "Objectifs cholestérol LDL (risque très élevé cardio-vasculaire)",
         value: ["< 1.8 mmol/L", "< 0,70 g/L"],
         type: 2
     }, {
