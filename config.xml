@@ -2,8 +2,8 @@
     <widget xmlns   = "http://www.w3.org/ns/widgets"
         xmlns:gap   = "http://phonegap.com/ns/1.0"
         id          = "fr.sapk.quizpharma"
-        version     = "1.1.6"
-        android-versionCode="101060" >
+        version     = "1.1.7"
+        android-versionCode="101070" >
     <name>Quiz Pharma</name>
 
     <description>
