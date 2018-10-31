@@ -222,20 +222,20 @@ Q.data = {
         value: ["< 4.1 mmol/L", "< 1.6 g/L"],
         type: 2
     }, {
-        name: "Objectifs cholestérol LDL (un seul facteur de risque)",
+        name: "Objectifs cholestérol LDL (risque cardio-vasculaire faible)",
         value: ["< 4.9 mmol/L", "< 1.9 g/L"],
         type: 2
     }, {
-        name: "Objectifs cholestérol LDL (2 facteurs de risque)",
-        value: ["< 4.1 mmol/L", "< 1.6 g/L"],
-        type: 2
-    }, {
-        name: "Objectifs cholestérol LDL (plus de 2 facteurs de risque)",
+        name: "Objectifs cholestérol LDL (risque cardio-vasculaire modéré)",
         value: ["< 3.4 mmol/L", "< 1.3 g/L"],
         type: 2
     }, {
-        name: "Objectifs cholestérol LDL (cas d’antécédent cardiovasculaire)",
-        value: ["< 2.6 mmol/L", "< 1 g/L"],
+        name: "Objectifs cholestérol LDL (risque cardio-vasculaire élevé)",
+        value: ["< 2.6 mmol/L", "< 1.0 g/L"],
+        type: 2
+    }, {
+        name: "Objectifs cholestérol LDL (risque cardio-vasculaire très élevé)",
+        value: ["< 1.8 mmol/L", "< 0,70 g/L"],
         type: 2
     }, {
         name: "Se Protéines",
