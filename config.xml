@@ -2,7 +2,7 @@
     <widget xmlns   = "http://www.w3.org/ns/widgets"
         xmlns:gap   = "http://phonegap.com/ns/1.0"
         id          = "fr.sapk.quizpharma"
-        version     = "1.1.7"
+        version     = "1.1.8"
         android-versionCode="101070" >
     <name>Quiz Pharma</name>
 
@@ -26,5 +26,5 @@ Tout est dans la poche maintenant. Bonnes révisions.
     <preference name="SplashScreenDelay" value="50" />
     
     <feature name="http://api.phonegap.com/1.0/storage"/>
-    <preference name="phonegap-version" value="cli-8.0.0" />
+    <preference name="phonegap-version" value="cli-9.0.0" />
 </widget>
