@@ -28,12 +28,13 @@ install:
 # - npm install --quiet
 
 before_script:
-  - uglifyjs --compress -o www/js/quiz.data.js www/js/quiz.data.js
+  - uglifyjs --compress -o www/js/quiz.data.min.js www/js/quiz.data.js
   
 script:
   - cordova build
 
 before_deploy:
+  - rm www/js/quiz.data.js www/css/style.css
   - cordova build --release
 
 deploy:
