@@ -22,13 +22,13 @@ before_install:
   - npm install --quiet -g npm cordova uglify-js
 
 install:
-  - cordova prepare android
+  - cordova platform add android
 # - npm install --quiet
 
 before_script:
   - uglifyjs --compress -o www/js/quiz.data.js www/js/quiz.data.js www/css/style.css
   
 script:
-  - cordova platform add
+  - cordova build
 
-# cordova platform add --release
+# cordova build --release
