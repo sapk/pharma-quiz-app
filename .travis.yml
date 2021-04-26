@@ -18,6 +18,8 @@ cache:
     - node_modules
 
 before_install:
+  - yes | sdkmanager "platforms;android-29" 
+  # Accept android licence
   - nvm install 15 && nvm alias default 15 && nvm use 15
   - npm install --quiet -g npm cordova uglify-js
 
