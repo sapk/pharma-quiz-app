@@ -8,7 +8,10 @@ body {
 body>.container {
 	height: 100%;
 	overflow-y: auto;
-	margin-top: 10px;
+}
+
+.navbar .navbar-brand {
+    height: 50px;
 }
 
 .menu,
