@@ -3,7 +3,7 @@
         xmlns:gap   = "http://phonegap.com/ns/1.0"
         id          = "fr.sapk.quizpharma"
         version     = "1.1.8"
-        android-versionCode="101070" >
+        android-versionCode="101080" >
     <name>Quiz Pharma</name>
 
     <description>
@@ -24,9 +24,6 @@ Tout est dans la poche maintenant. Bonnes révisions.
     <preference name="orienation" value="portrait" />
     
     <preference name="SplashScreenDelay" value="50" />
-    
-    <feature name="http://api.phonegap.com/1.0/storage"/>
-    <preference name="phonegap-version" value="cli-9.0.0" />
 
     <content src="index.html" />
     <access origin="*" />
