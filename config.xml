@@ -19,7 +19,7 @@ Tout est dans la poche maintenant. Bonnes révisions.
         Antoine GIRARD 
     </author>
 
-    <icon src="img/logo.png" />
+    <icon src="www/img/logo.png" />
     
     <preference name="orienation" value="portrait" />
     
