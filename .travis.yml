@@ -34,7 +34,7 @@ script:
   - cordova build
 
 before_deploy:
-  - rm www/js/quiz.data.js
+  - rm www/js/quiz.data.js www/css/style.css
   - cordova build --release
 
 deploy:
