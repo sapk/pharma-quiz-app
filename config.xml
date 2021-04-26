@@ -2,7 +2,7 @@
     <widget xmlns   = "http://www.w3.org/ns/widgets"
         xmlns:gap   = "http://phonegap.com/ns/1.0"
         id          = "fr.sapk.quizpharma"
-        version     = "1.1.7"
+        version     = "1.1.8"
         android-versionCode="101070" >
     <name>Quiz Pharma</name>
 
@@ -19,12 +19,25 @@ Tout est dans la poche maintenant. Bonnes révisions.
         Antoine GIRARD 
     </author>
 
-    <icon src="img/logo.png" />
+    <icon src="www/img/logo.png" />
     
     <preference name="orienation" value="portrait" />
     
     <preference name="SplashScreenDelay" value="50" />
     
     <feature name="http://api.phonegap.com/1.0/storage"/>
-    <preference name="phonegap-version" value="cli-8.0.0" />
+    <preference name="phonegap-version" value="cli-9.0.0" />
+
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <platform name="android">
+        <allow-intent href="market:*" />
+    </platform>
+
 </widget>
